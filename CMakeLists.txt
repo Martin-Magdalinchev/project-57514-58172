@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 3.16)
 project(project)
 
 set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -O0")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O0")
 
 ###############
 # libWB
@@ -17,12 +19,13 @@ include_directories(libwb)
 
 include_directories(include)
 
+find_package(OpenMP REQUIRED)
+
 add_executable(project
         src/main.cpp
         src/histogram_eq.cpp
 )
-
-target_link_libraries(project wb)
+target_link_libraries(project PUBLIC OpenMP::OpenMP_CXX wb)
 
 
 add_executable(dataset_generator
