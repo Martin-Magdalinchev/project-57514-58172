@@ -1,4 +1,4 @@
-# Install script for directory: /mnt/c/Users/pmtbl/Desktop/CP/project-57514-58172/build/googletest/download
+# Install script for directory: /mnt/c/Users/pmtbl/Desktop/project-57514-58172/build/googletest/download
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/mnt/c/Users/pmtbl/Desktop/CP/project-57514-58172/build/googletest/download/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/mnt/c/Users/pmtbl/Desktop/project-57514-58172/build/googletest/download/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

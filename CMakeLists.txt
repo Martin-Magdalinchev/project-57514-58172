@@ -2,8 +2,12 @@ cmake_minimum_required(VERSION 3.16)
 project(project)
 
 set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -O0")
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O0")
+
+####################
+## OpenMP
+####################
+
+find_package(OpenMP REQUIRED)
 
 ###############
 # libWB
@@ -19,20 +23,33 @@ include_directories(libwb)
 
 include_directories(include)
 
-find_package(OpenMP REQUIRED)
-
 add_executable(project
         src/main.cpp
         src/histogram_eq.cpp
 )
-target_link_libraries(project PUBLIC OpenMP::OpenMP_CXX wb)
 
+target_link_libraries(project wb)
+
+###################
+# dataset_generator
+###################
 
 add_executable(dataset_generator
         src/dataset_generator.cpp
 )
 
 target_link_libraries(dataset_generator wb)
+
+###############
+# project_par
+###############
+
+add_executable(project_par
+        src/main.cpp
+        src/histogram_par.cpp
+)
+
+target_link_libraries(project_par PUBLIC wb PUBLIC OpenMP::OpenMP_CXX)
 
 ##############################################################
 # Tests

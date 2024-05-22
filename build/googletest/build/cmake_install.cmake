@@ -1,4 +1,4 @@
-# Install script for directory: /mnt/c/Users/pmtbl/Desktop/CP/project-57514-58172/build/googletest/src
+# Install script for directory: /mnt/c/Users/pmtbl/Desktop/project-57514-58172/build/googletest/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,7 +44,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/mnt/c/Users/pmtbl/Desktop/CP/project-57514-58172/build/googletest/build/googlemock/cmake_install.cmake")
+  include("/mnt/c/Users/pmtbl/Desktop/project-57514-58172/build/googletest/build/googlemock/cmake_install.cmake")
 
 endif()
 

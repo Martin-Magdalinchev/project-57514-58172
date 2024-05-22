@@ -1,4 +1,4 @@
-# Install script for directory: /mnt/c/Users/pmtbl/Desktop/CP/project-57514-58172/test
+# Install script for directory: /mnt/c/Users/pmtbl/Desktop/project-57514-58172/test
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/Users/pmtbl/Desktop/CP/project-57514-58172
+CMAKE_SOURCE_DIR = /mnt/c/Users/pmtbl/Desktop/project-57514-58172
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/Users/pmtbl/Desktop/CP/project-57514-58172/build
+CMAKE_BINARY_DIR = /mnt/c/Users/pmtbl/Desktop/project-57514-58172/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -142,9 +142,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/pmtbl/Desktop/CP/project-57514-58172/build/CMakeFiles /mnt/c/Users/pmtbl/Desktop/CP/project-57514-58172/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/pmtbl/Desktop/project-57514-58172/build/CMakeFiles /mnt/c/Users/pmtbl/Desktop/project-57514-58172/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/pmtbl/Desktop/CP/project-57514-58172/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/pmtbl/Desktop/project-57514-58172/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -183,6 +183,32 @@ project: cmake_check_build_system
 project/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/build
 .PHONY : project/fast
+
+#=============================================================================
+# Target rules for targets named dataset_generator
+
+# Build rule for target.
+dataset_generator: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 dataset_generator
+.PHONY : dataset_generator
+
+# fast build rule for target.
+dataset_generator/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dataset_generator.dir/build.make CMakeFiles/dataset_generator.dir/build
+.PHONY : dataset_generator/fast
+
+#=============================================================================
+# Target rules for targets named project_par
+
+# Build rule for target.
+project_par: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 project_par
+.PHONY : project_par
+
+# fast build rule for target.
+project_par/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/project_par.dir/build.make CMakeFiles/project_par.dir/build
+.PHONY : project_par/fast
 
 #=============================================================================
 # Target rules for targets named wb
@@ -288,6 +314,30 @@ histogram_eq_test/fast:
 	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/histogram_eq_test.dir/build.make test/CMakeFiles/histogram_eq_test.dir/build
 .PHONY : histogram_eq_test/fast
 
+src/dataset_generator.o: src/dataset_generator.cpp.o
+.PHONY : src/dataset_generator.o
+
+# target to build an object file
+src/dataset_generator.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dataset_generator.dir/build.make CMakeFiles/dataset_generator.dir/src/dataset_generator.cpp.o
+.PHONY : src/dataset_generator.cpp.o
+
+src/dataset_generator.i: src/dataset_generator.cpp.i
+.PHONY : src/dataset_generator.i
+
+# target to preprocess a source file
+src/dataset_generator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dataset_generator.dir/build.make CMakeFiles/dataset_generator.dir/src/dataset_generator.cpp.i
+.PHONY : src/dataset_generator.cpp.i
+
+src/dataset_generator.s: src/dataset_generator.cpp.s
+.PHONY : src/dataset_generator.s
+
+# target to generate assembly for a file
+src/dataset_generator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dataset_generator.dir/build.make CMakeFiles/dataset_generator.dir/src/dataset_generator.cpp.s
+.PHONY : src/dataset_generator.cpp.s
+
 src/histogram_eq.o: src/histogram_eq.cpp.o
 .PHONY : src/histogram_eq.o
 
@@ -312,12 +362,37 @@ src/histogram_eq.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/src/histogram_eq.cpp.s
 .PHONY : src/histogram_eq.cpp.s
 
+src/histogram_par.o: src/histogram_par.cpp.o
+.PHONY : src/histogram_par.o
+
+# target to build an object file
+src/histogram_par.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/project_par.dir/build.make CMakeFiles/project_par.dir/src/histogram_par.cpp.o
+.PHONY : src/histogram_par.cpp.o
+
+src/histogram_par.i: src/histogram_par.cpp.i
+.PHONY : src/histogram_par.i
+
+# target to preprocess a source file
+src/histogram_par.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/project_par.dir/build.make CMakeFiles/project_par.dir/src/histogram_par.cpp.i
+.PHONY : src/histogram_par.cpp.i
+
+src/histogram_par.s: src/histogram_par.cpp.s
+.PHONY : src/histogram_par.s
+
+# target to generate assembly for a file
+src/histogram_par.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/project_par.dir/build.make CMakeFiles/project_par.dir/src/histogram_par.cpp.s
+.PHONY : src/histogram_par.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
 # target to build an object file
 src/main.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/src/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/project_par.dir/build.make CMakeFiles/project_par.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -326,6 +401,7 @@ src/main.i: src/main.cpp.i
 # target to preprocess a source file
 src/main.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/src/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/project_par.dir/build.make CMakeFiles/project_par.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -334,6 +410,7 @@ src/main.s: src/main.cpp.s
 # target to generate assembly for a file
 src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/src/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/project_par.dir/build.make CMakeFiles/project_par.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
 # Help Target
@@ -349,6 +426,7 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... dataset_generator"
 	@echo "... gmock"
 	@echo "... gmock_main"
 	@echo "... gtest"
@@ -356,11 +434,18 @@ help:
 	@echo "... histogram_eq_test"
 	@echo "... libwb"
 	@echo "... project"
+	@echo "... project_par"
 	@echo "... template_test"
 	@echo "... wb"
+	@echo "... src/dataset_generator.o"
+	@echo "... src/dataset_generator.i"
+	@echo "... src/dataset_generator.s"
 	@echo "... src/histogram_eq.o"
 	@echo "... src/histogram_eq.i"
 	@echo "... src/histogram_eq.s"
+	@echo "... src/histogram_par.o"
+	@echo "... src/histogram_par.i"
+	@echo "... src/histogram_par.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
