@@ -16,3 +16,12 @@ Parallelizado:
         tempo de execução ~= 3900 ms
 
         speedup = 2.67
+
+    separação das funcionalidades de histogram_equalization:
+
+        "
+
+        "
+        tempo de execução ~= 1800 (not sure how that happened)
+
+        speedup = 5.33
