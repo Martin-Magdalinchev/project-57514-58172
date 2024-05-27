@@ -43,13 +43,27 @@ namespace cp
 
     static void build_histogram(const unsigned char *gray_image, int *histogram, int size)
     {
+
         std::fill(histogram, histogram + HISTOGRAM_LENGTH, 0);
 
-#pragma omp parallel for
-        for (int i = 0; i < size; i++)
+#pragma omp parallel
         {
-#pragma omp atomic
-            histogram[gray_image[i]]++;
+            int local_histogram[HISTOGRAM_LENGTH] = {0}; // Thread-local histogram
+
+#pragma omp for
+            for (int i = 0; i < size; i++)
+            {
+                local_histogram[gray_image[i]]++;
+            }
+
+#pragma omp critical
+            {
+                // Merge local histograms into the global histogram
+                for (int i = 0; i < HISTOGRAM_LENGTH; i++)
+                {
+                    histogram[i] += local_histogram[i];
+                }
+            }
         }
     }
 
