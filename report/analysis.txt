@@ -8,7 +8,11 @@ Sequencial:
 
     imagem: 3000x2500 px
     iterações: 15
-    tempo de execução ~= 14500 ms (valor mais baixo registado, o maior foi 27000)
+    tempo de execução ~= 14500 ms
+
+    imagem: 3000x2500 px
+    iterações: 20
+    tempo de execução ~= 19000 ms
 
 
 Parallelizado:
@@ -38,7 +42,7 @@ Parallelizado:
 
         imagem: 3000x2500 px
         iterações: 15
-        tempo de execução ~=2000
+        tempo de execução ~= 2000 ms
 
         speedup = 14500/2000 = 7.25
 
@@ -57,3 +61,12 @@ Parallelizado:
         é preciso juntar as funcionalidades
 
         apply_histogram_equalization e convert_to_float também podem ser juntadas
+
+        imagem: 3000x2500 px
+        num_threads = 8
+        iterações: 20
+        tempo de execução ~= 1800 ms
+
+        speedup = 19000/1800 = 10.5
+
+        talvez seja preciso ajustar o timer para registar apenas a parte paralelizável, falar com o stor
