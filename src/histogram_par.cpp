@@ -87,20 +87,58 @@ namespace cp
         return cdf_min;
     }
 
-    static void apply_histogram_equalization(unsigned char *uchar_image, const float *cdf, float cdf_min, int size_channels)
+    static void process_image_and_build_histogram(const float *input_image_data,
+                                                  unsigned char *uchar_image,
+                                                  unsigned char *gray_image,
+                                                  int *histogram,
+                                                  int size,
+                                                  int size_channels)
+    {
+
+        std::fill(histogram, histogram + HISTOGRAM_LENGTH, 0);
+
+#pragma omp parallel
+        {
+            /*
+#pragma omp single
+    {
+        std::cout << "Number of threads: " << omp_get_num_threads() << std::endl;
+    }*/
+
+            int local_histogram[HISTOGRAM_LENGTH] = {0};
+
+#pragma omp for
+            for (int i = 0; i < size; i++)
+            {
+                int idx = 3 * i;
+                uchar_image[idx] = static_cast<unsigned char>(255 * input_image_data[idx]);
+                uchar_image[idx + 1] = static_cast<unsigned char>(255 * input_image_data[idx + 1]);
+                uchar_image[idx + 2] = static_cast<unsigned char>(255 * input_image_data[idx + 2]);
+
+                gray_image[i] = static_cast<unsigned char>(
+                    0.21 * uchar_image[idx] +
+                    0.71 * uchar_image[idx + 1] +
+                    0.07 * uchar_image[idx + 2]);
+
+                local_histogram[gray_image[i]]++;
+            }
+
+#pragma omp critical
+            {
+                for (int i = 0; i < HISTOGRAM_LENGTH; i++)
+                {
+                    histogram[i] += local_histogram[i];
+                }
+            }
+        }
+    }
+
+    static void apply_histogram_equalization_and_convert_to_float(unsigned char *uchar_image, float *output_image_data, const float *cdf, float cdf_min, int size_channels)
     {
 #pragma omp parallel for
         for (int i = 0; i < size_channels; i++)
         {
             uchar_image[i] = correct_color(cdf[uchar_image[i]], cdf_min);
-        }
-    }
-
-    static void convert_to_float(const unsigned char *uchar_image, float *output_image_data, int size_channels)
-    {
-#pragma omp parallel for
-        for (int i = 0; i < size_channels; i++)
-        {
             output_image_data[i] = static_cast<float>(uchar_image[i]) / 255.0f;
         }
     }
@@ -117,23 +155,17 @@ namespace cp
         const auto size = width * height;
         const auto size_channels = size * channels;
 
-        // Print number of threads used in this parallel region
-        /*
-#pragma omp parallel
-        {
-#pragma omp single
-            {
-                std::cout << "Number of threads: " << omp_get_num_threads() << std::endl;
-            }
-        }*/
+        process_image_and_build_histogram(input_image_data, uchar_image.get(), gray_image.get(), histogram, size, size_channels);
 
-        convert_to_uchar(input_image_data, uchar_image.get(), size_channels);
-        convert_to_grayscale(uchar_image.get(), gray_image.get(), size);
-        build_histogram(gray_image.get(), histogram, size);
+        // convert_to_uchar(input_image_data, uchar_image.get(), size_channels);
+        // convert_to_grayscale(uchar_image.get(), gray_image.get(), size);
+        // build_histogram(gray_image.get(), histogram, size);
         calculate_cdf(histogram, cdf, size);
         float cdf_min = find_cdf_min(cdf);
-        apply_histogram_equalization(uchar_image.get(), cdf, cdf_min, size_channels);
-        convert_to_float(uchar_image.get(), output_image_data, size_channels);
+        // apply_histogram_equalization(uchar_image.get(), cdf, cdf_min, size_channels);
+        // convert_to_float(uchar_image.get(), output_image_data, size_channels);
+
+        apply_histogram_equalization_and_convert_to_float(uchar_image.get(), output_image_data, cdf, cdf_min, size_channels);
     }
 
     wbImage_t iterative_histogram_equalization(wbImage_t &input_image, int iterations)

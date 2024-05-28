@@ -19,19 +19,11 @@ Parallelizado:
 
         num_threads = 8
         iterações: 10
-        tempo de execução ~= 3900 ms
-
-        speedup = 2.67
-
-    separação das funcionalidades de histogram_equalization:
-
-        "
-
-        "
-        "
-        tempo de execução ~= 1800 (not sure how that happened, provavelmente seria melhor ignorar)
+        tempo de execução ~= 1800 ms
 
         speedup = 5.33
+
+    separação das funcionalidades de histogram_equalization
 
     Análise do profiller:
 
@@ -46,6 +38,22 @@ Parallelizado:
 
         imagem: 3000x2500 px
         iterações: 15
-        tempo de execução ~=1500
+        tempo de execução ~=2000
 
-        speedup = 14500/1500 = 9.67
+        speedup = 14500/2000 = 7.25
+
+    Análise do profiller:
+
+        correct_color: 27.56%
+        apply_histogram_equalization: 14.34%
+        convert_to_float: 11.76%
+
+        não sei como otimizar o correct_color e apply_histogram_equalization
+
+    Reduzir número de ciclos:
+
+        convert_to_uchar, convert_to_grayscale, local_histogram em 1 ciclo
+        calcular 3 uchar_image em cada passo para o ciclo funcionar
+        é preciso juntar as funcionalidades
+
+        apply_histogram_equalization e convert_to_float também podem ser juntadas
