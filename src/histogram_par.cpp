@@ -1,9 +1,11 @@
 #include "histogram_eq.h"
 #include "omp.h"
+#include "timer.h"
 
 namespace cp
 {
     constexpr auto HISTOGRAM_LENGTH = 256;
+    constexpr auto NUM_THREADS = 8;
 
     static float inline prob(const int x, const int size)
     {
@@ -46,7 +48,7 @@ namespace cp
 
         std::fill(histogram, histogram + HISTOGRAM_LENGTH, 0);
 
-#pragma omp parallel
+#pragma omp parallel num_threads(NUM_THREADS)
         {
             int local_histogram[HISTOGRAM_LENGTH] = {0}; // Thread-local histogram
 
@@ -79,7 +81,7 @@ namespace cp
     static float find_cdf_min(const float *cdf)
     {
         float cdf_min = cdf[0];
-#pragma omp parallel for reduction(min : cdf_min)
+#pragma omp parallel for reduction(min : cdf_min) num_threads(NUM_THREADS)
         for (int i = 1; i < HISTOGRAM_LENGTH; i++)
         {
             cdf_min = std::min(cdf_min, cdf[i]);
@@ -97,7 +99,7 @@ namespace cp
 
         std::fill(histogram, histogram + HISTOGRAM_LENGTH, 0);
 
-#pragma omp parallel
+#pragma omp parallel num_threads(NUM_THREADS)
         {
             /*
 #pragma omp single
@@ -135,7 +137,7 @@ namespace cp
 
     static void apply_histogram_equalization_and_convert_to_float(unsigned char *uchar_image, float *output_image_data, const float *cdf, float cdf_min, int size_channels)
     {
-#pragma omp parallel for
+#pragma omp parallel for num_threads(NUM_THREADS)
         for (int i = 0; i < size_channels; i++)
         {
             uchar_image[i] = correct_color(cdf[uchar_image[i]], cdf_min);
@@ -186,6 +188,10 @@ namespace cp
         int histogram[HISTOGRAM_LENGTH];
         float cdf[HISTOGRAM_LENGTH];
 
+        // set timer from here
+        marrow::timer t;
+        t.start();
+
         for (int i = 0; i < iterations; i++)
         {
             histogram_equalization(width, height,
@@ -195,6 +201,9 @@ namespace cp
 
             input_image_data = output_image_data;
         }
+        // to here
+        t.stop();
+        t.output_stats(std::cout);
 
         return output_image;
     }

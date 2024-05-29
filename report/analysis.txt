@@ -65,7 +65,7 @@ Parallelizado:
         imagem: 3000x2500 px
         num_threads = 8
         iterações: 20
-        tempo de execução ~= 1800 ms
+        tempo de execução ~= 1800 ms (1562)
 
         speedup = 19000/1800 = 10.5
 

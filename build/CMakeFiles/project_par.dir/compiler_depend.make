@@ -360,7 +360,11 @@ CMakeFiles/project_par.dir/src/histogram_par.cpp.o: ../src/histogram_par.cpp \
   ../libwb/wbTimer.h \
   ../libwb/wbPath.h \
   ../libwb/wbDataset.h \
-  /usr/lib/gcc/x86_64-linux-gnu/11/include/omp.h
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/omp.h \
+  ../include/timer.h \
+  /usr/include/c++/11/chrono \
+  /usr/include/c++/11/ratio \
+  /usr/include/c++/11/bits/parse_numbers.h
 
 CMakeFiles/project_par.dir/src/main.cpp.o: ../src/main.cpp \
   /usr/include/stdc-predef.h \
@@ -720,20 +724,16 @@ CMakeFiles/project_par.dir/src/main.cpp.o: ../src/main.cpp \
   ../libwb/wbThrust.h \
   ../libwb/wbTimer.h \
   ../libwb/wbPath.h \
-  ../libwb/wbDataset.h \
-  ../include/timer.h \
-  /usr/include/c++/11/chrono \
-  /usr/include/c++/11/ratio \
-  /usr/include/c++/11/bits/parse_numbers.h
+  ../libwb/wbDataset.h
 
+
+../src/main.cpp:
 
 /usr/include/c++/11/bits/parse_numbers.h:
 
 /usr/include/c++/11/ratio:
 
 ../include/timer.h:
-
-../src/main.cpp:
 
 ../libwb/wbThrust.h:
 

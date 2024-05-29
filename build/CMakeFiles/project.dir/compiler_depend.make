@@ -359,7 +359,11 @@ CMakeFiles/project.dir/src/histogram_eq.cpp.o: ../src/histogram_eq.cpp \
   ../libwb/wbThrust.h \
   ../libwb/wbTimer.h \
   ../libwb/wbPath.h \
-  ../libwb/wbDataset.h
+  ../libwb/wbDataset.h \
+  ../include/timer.h \
+  /usr/include/c++/11/chrono \
+  /usr/include/c++/11/ratio \
+  /usr/include/c++/11/bits/parse_numbers.h
 
 CMakeFiles/project.dir/src/main.cpp.o: ../src/main.cpp \
   /usr/include/stdc-predef.h \
@@ -719,20 +723,16 @@ CMakeFiles/project.dir/src/main.cpp.o: ../src/main.cpp \
   ../libwb/wbThrust.h \
   ../libwb/wbTimer.h \
   ../libwb/wbPath.h \
-  ../libwb/wbDataset.h \
-  ../include/timer.h \
-  /usr/include/c++/11/chrono \
-  /usr/include/c++/11/ratio \
-  /usr/include/c++/11/bits/parse_numbers.h
+  ../libwb/wbDataset.h
 
+
+../src/main.cpp:
 
 /usr/include/c++/11/bits/parse_numbers.h:
 
 /usr/include/c++/11/ratio:
 
 ../include/timer.h:
-
-../src/main.cpp:
 
 ../libwb/wbThrust.h:
 

@@ -362,6 +362,10 @@ CMakeFiles/project_par.dir/src/histogram_par.cpp.o
  /mnt/c/Users/pmtbl/Desktop/project-57514-58172/libwb/wbPath.h
  /mnt/c/Users/pmtbl/Desktop/project-57514-58172/libwb/wbDataset.h
  /usr/lib/gcc/x86_64-linux-gnu/11/include/omp.h
+ /mnt/c/Users/pmtbl/Desktop/project-57514-58172/include/timer.h
+ /usr/include/c++/11/chrono
+ /usr/include/c++/11/ratio
+ /usr/include/c++/11/bits/parse_numbers.h
 
 CMakeFiles/project_par.dir/src/main.cpp.o
  /mnt/c/Users/pmtbl/Desktop/project-57514-58172/src/main.cpp
@@ -723,8 +727,4 @@ CMakeFiles/project_par.dir/src/main.cpp.o
  /mnt/c/Users/pmtbl/Desktop/project-57514-58172/libwb/wbTimer.h
  /mnt/c/Users/pmtbl/Desktop/project-57514-58172/libwb/wbPath.h
  /mnt/c/Users/pmtbl/Desktop/project-57514-58172/libwb/wbDataset.h
- /mnt/c/Users/pmtbl/Desktop/project-57514-58172/include/timer.h
- /usr/include/c++/11/chrono
- /usr/include/c++/11/ratio
- /usr/include/c++/11/bits/parse_numbers.h
 
