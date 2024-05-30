@@ -112,6 +112,7 @@ namespace cp
 #pragma omp for
             for (int i = 0; i < size; i++)
             {
+                // TODO remove the gray_image and uchar image
                 int idx = 3 * i;
                 uchar_image[idx] = static_cast<unsigned char>(255 * input_image_data[idx]);
                 uchar_image[idx + 1] = static_cast<unsigned char>(255 * input_image_data[idx + 1]);

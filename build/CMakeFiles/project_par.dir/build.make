@@ -109,7 +109,7 @@ project_par: CMakeFiles/project_par.dir/src/main.cpp.o
 project_par: CMakeFiles/project_par.dir/src/histogram_par.cpp.o
 project_par: CMakeFiles/project_par.dir/build.make
 project_par: libwb/libwb.a
-project_par: /usr/lib/gcc/x86_64-linux-gnu/11/libgomp.so
+project_par: /usr/lib/gcc/x86_64-linux-gnu/10/libgomp.so
 project_par: /usr/lib/x86_64-linux-gnu/libpthread.a
 project_par: CMakeFiles/project_par.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/pmtbl/Desktop/project-57514-58172/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable project_par"

@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.16)
-project(project)
+project(project LANGUAGES CXX CUDA)
 
 set(CMAKE_CXX_STANDARD 17)
 
@@ -16,6 +16,22 @@ find_package(OpenMP REQUIRED)
 set(BUILD_LIBWB_LIBRARY ON CACHE BOOL "Turn on build of libwb library")
 add_subdirectory(libwb)
 include_directories(libwb)
+
+##############################################################
+# Autodetect CUDA architecture(s)
+##############################################################
+
+include(FindCUDA/select_compute_arch)
+CUDA_DETECT_INSTALLED_GPUS(INSTALLED_GPU_CCS_1)
+string(STRIP "${INSTALLED_GPU_CCS_1}" INSTALLED_GPU_CCS_2)
+string(REPLACE " " ";" INSTALLED_GPU_CCS_3 "${INSTALLED_GPU_CCS_2}")
+string(REPLACE "." "" CUDA_ARCH_LIST "${INSTALLED_GPU_CCS_3}")
+SET(CMAKE_CUDA_ARCHITECTURES ${CUDA_ARCH_LIST})
+set_property(GLOBAL PROPERTY CUDA_ARCHITECTURES "${CUDA_ARCH_LIST}")
+
+cuda_select_nvcc_arch_flags(ARCH_FLAGS Auto)
+list(APPEND CUDA_NVCC_FLAGS ${ARCH_FLAGS})
+message("-- CUDA Architecture(s): " ${CMAKE_CUDA_ARCHITECTURES})
 
 ###############
 # project
@@ -50,6 +66,17 @@ add_executable(project_par
 )
 
 target_link_libraries(project_par PUBLIC wb PUBLIC OpenMP::OpenMP_CXX)
+
+###############
+# project_cuda
+###############
+#
+#add_executable(project_cuda
+#        src/main.cpp
+#        src/histogram_cuda.cu
+#)
+#
+#target_link_libraries(project_cuda wb )
 
 ##############################################################
 # Tests

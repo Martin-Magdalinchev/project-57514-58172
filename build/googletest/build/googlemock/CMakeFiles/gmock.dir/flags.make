@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/mnt/c/Users/pmtbl/Desktop/project-57514-58172/libwb -I/mnt/c/Users/pmtbl/Desktop/project-57514-58172/include -I/mnt/c/Users/pmtbl/Desktop/project-57514-58172/build/googletest/src/googlemock/include -I/mnt/c/Users/pmtbl/Desktop/project-57514-58172/build/googletest/src/googlemock -isystem /mnt/c/Users/pmtbl/Desktop/project-57514-58172/build/googletest/src/googletest/include -isystem /mnt/c/Users/pmtbl/Desktop/project-57514-58172/build/googletest/src/googletest
 
-CXX_FLAGS = -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers
+CXX_FLAGS = -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -std=c++17
 

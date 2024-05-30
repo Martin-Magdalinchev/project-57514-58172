@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/mnt/c/Users/pmtbl/Desktop/project-57514-58172/libwb -I/mnt/c/Users/pmtbl/Desktop/project-57514-58172/include
 
-CXX_FLAGS = 
+CXX_FLAGS = -std=gnu++17
 
