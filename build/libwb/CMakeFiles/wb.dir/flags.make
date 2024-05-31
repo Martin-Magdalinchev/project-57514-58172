@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/martin/Documents/CP/project-57514-58172/libwb
+CXX_INCLUDES = -I/mnt/c/Users/pmtbl/Desktop/project-57514-58172/libwb
 
 CXX_FLAGS =  -Wno-dollar-in-identifier-extension -std=c++11 -O3 -DNDEBUG -std=gnu++11
 

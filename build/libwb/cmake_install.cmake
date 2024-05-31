@@ -1,4 +1,4 @@
-# Install script for directory: /home/martin/Documents/CP/project-57514-58172/libwb
+# Install script for directory: /mnt/c/Users/pmtbl/Desktop/project-57514-58172/libwb
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

@@ -1,4 +1,4 @@
-# Install script for directory: /home/martin/Documents/CP/project-57514-58172
+# Install script for directory: /mnt/c/Users/pmtbl/Desktop/project-57514-58172
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,12 +44,12 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/martin/Documents/CP/project-57514-58172/build/libwb/cmake_install.cmake")
+  include("/mnt/c/Users/pmtbl/Desktop/project-57514-58172/build/libwb/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/martin/Documents/CP/project-57514-58172/build/test/cmake_install.cmake")
+  include("/mnt/c/Users/pmtbl/Desktop/project-57514-58172/build/test/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -60,5 +60,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/martin/Documents/CP/project-57514-58172/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/mnt/c/Users/pmtbl/Desktop/project-57514-58172/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/martin/Documents/CP/project-57514-58172
+CMAKE_SOURCE_DIR = /mnt/c/Users/pmtbl/Desktop/project-57514-58172
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/martin/Documents/CP/project-57514-58172/build
+CMAKE_BINARY_DIR = /mnt/c/Users/pmtbl/Desktop/project-57514-58172/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/project.dir/depend.make
@@ -72,30 +72,30 @@ include CMakeFiles/project.dir/flags.make
 CMakeFiles/project.dir/src/main.cpp.o: CMakeFiles/project.dir/flags.make
 CMakeFiles/project.dir/src/main.cpp.o: ../src/main.cpp
 CMakeFiles/project.dir/src/main.cpp.o: CMakeFiles/project.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/martin/Documents/CP/project-57514-58172/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/project.dir/src/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/project.dir/src/main.cpp.o -MF CMakeFiles/project.dir/src/main.cpp.o.d -o CMakeFiles/project.dir/src/main.cpp.o -c /home/martin/Documents/CP/project-57514-58172/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/pmtbl/Desktop/project-57514-58172/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/project.dir/src/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/project.dir/src/main.cpp.o -MF CMakeFiles/project.dir/src/main.cpp.o.d -o CMakeFiles/project.dir/src/main.cpp.o -c /mnt/c/Users/pmtbl/Desktop/project-57514-58172/src/main.cpp
 
 CMakeFiles/project.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/martin/Documents/CP/project-57514-58172/src/main.cpp > CMakeFiles/project.dir/src/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/pmtbl/Desktop/project-57514-58172/src/main.cpp > CMakeFiles/project.dir/src/main.cpp.i
 
 CMakeFiles/project.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/martin/Documents/CP/project-57514-58172/src/main.cpp -o CMakeFiles/project.dir/src/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/pmtbl/Desktop/project-57514-58172/src/main.cpp -o CMakeFiles/project.dir/src/main.cpp.s
 
 CMakeFiles/project.dir/src/histogram_eq.cpp.o: CMakeFiles/project.dir/flags.make
 CMakeFiles/project.dir/src/histogram_eq.cpp.o: ../src/histogram_eq.cpp
 CMakeFiles/project.dir/src/histogram_eq.cpp.o: CMakeFiles/project.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/martin/Documents/CP/project-57514-58172/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/project.dir/src/histogram_eq.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/project.dir/src/histogram_eq.cpp.o -MF CMakeFiles/project.dir/src/histogram_eq.cpp.o.d -o CMakeFiles/project.dir/src/histogram_eq.cpp.o -c /home/martin/Documents/CP/project-57514-58172/src/histogram_eq.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/pmtbl/Desktop/project-57514-58172/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/project.dir/src/histogram_eq.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/project.dir/src/histogram_eq.cpp.o -MF CMakeFiles/project.dir/src/histogram_eq.cpp.o.d -o CMakeFiles/project.dir/src/histogram_eq.cpp.o -c /mnt/c/Users/pmtbl/Desktop/project-57514-58172/src/histogram_eq.cpp
 
 CMakeFiles/project.dir/src/histogram_eq.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project.dir/src/histogram_eq.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/martin/Documents/CP/project-57514-58172/src/histogram_eq.cpp > CMakeFiles/project.dir/src/histogram_eq.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/pmtbl/Desktop/project-57514-58172/src/histogram_eq.cpp > CMakeFiles/project.dir/src/histogram_eq.cpp.i
 
 CMakeFiles/project.dir/src/histogram_eq.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project.dir/src/histogram_eq.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/martin/Documents/CP/project-57514-58172/src/histogram_eq.cpp -o CMakeFiles/project.dir/src/histogram_eq.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/pmtbl/Desktop/project-57514-58172/src/histogram_eq.cpp -o CMakeFiles/project.dir/src/histogram_eq.cpp.s
 
 # Object files for target project
 project_OBJECTS = \
@@ -110,7 +110,7 @@ project: CMakeFiles/project.dir/src/histogram_eq.cpp.o
 project: CMakeFiles/project.dir/build.make
 project: libwb/libwb.a
 project: CMakeFiles/project.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/martin/Documents/CP/project-57514-58172/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable project"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/pmtbl/Desktop/project-57514-58172/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable project"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/project.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -122,6 +122,6 @@ CMakeFiles/project.dir/clean:
 .PHONY : CMakeFiles/project.dir/clean
 
 CMakeFiles/project.dir/depend:
-	cd /home/martin/Documents/CP/project-57514-58172/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/martin/Documents/CP/project-57514-58172 /home/martin/Documents/CP/project-57514-58172 /home/martin/Documents/CP/project-57514-58172/build /home/martin/Documents/CP/project-57514-58172/build /home/martin/Documents/CP/project-57514-58172/build/CMakeFiles/project.dir/DependInfo.cmake --color=$(COLOR)
+	cd /mnt/c/Users/pmtbl/Desktop/project-57514-58172/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/Users/pmtbl/Desktop/project-57514-58172 /mnt/c/Users/pmtbl/Desktop/project-57514-58172 /mnt/c/Users/pmtbl/Desktop/project-57514-58172/build /mnt/c/Users/pmtbl/Desktop/project-57514-58172/build /mnt/c/Users/pmtbl/Desktop/project-57514-58172/build/CMakeFiles/project.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/project.dir/depend
 
