@@ -250,6 +250,19 @@ project_cuda/fast:
 .PHONY : project_cuda/fast
 
 #=============================================================================
+# Target rules for targets named project_cuda_512
+
+# Build rule for target.
+project_cuda_512: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 project_cuda_512
+.PHONY : project_cuda_512
+
+# fast build rule for target.
+project_cuda_512/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/project_cuda_512.dir/build.make CMakeFiles/project_cuda_512.dir/build
+.PHONY : project_cuda_512/fast
+
+#=============================================================================
 # Target rules for targets named wb
 
 # Build rule for target.
@@ -401,6 +414,30 @@ src/histogram_cuda.cu.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/project_cuda.dir/build.make CMakeFiles/project_cuda.dir/src/histogram_cuda.cu.s
 .PHONY : src/histogram_cuda.cu.s
 
+src/histogram_cuda_512.o: src/histogram_cuda_512.cu.o
+.PHONY : src/histogram_cuda_512.o
+
+# target to build an object file
+src/histogram_cuda_512.cu.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/project_cuda_512.dir/build.make CMakeFiles/project_cuda_512.dir/src/histogram_cuda_512.cu.o
+.PHONY : src/histogram_cuda_512.cu.o
+
+src/histogram_cuda_512.i: src/histogram_cuda_512.cu.i
+.PHONY : src/histogram_cuda_512.i
+
+# target to preprocess a source file
+src/histogram_cuda_512.cu.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/project_cuda_512.dir/build.make CMakeFiles/project_cuda_512.dir/src/histogram_cuda_512.cu.i
+.PHONY : src/histogram_cuda_512.cu.i
+
+src/histogram_cuda_512.s: src/histogram_cuda_512.cu.s
+.PHONY : src/histogram_cuda_512.s
+
+# target to generate assembly for a file
+src/histogram_cuda_512.cu.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/project_cuda_512.dir/build.make CMakeFiles/project_cuda_512.dir/src/histogram_cuda_512.cu.s
+.PHONY : src/histogram_cuda_512.cu.s
+
 src/histogram_eq.o: src/histogram_eq.cpp.o
 .PHONY : src/histogram_eq.o
 
@@ -507,6 +544,7 @@ src/main.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/project_par_initial.dir/build.make CMakeFiles/project_par_initial.dir/src/main.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/project_par_second.dir/build.make CMakeFiles/project_par_second.dir/src/main.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/project_cuda.dir/build.make CMakeFiles/project_cuda.dir/src/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/project_cuda_512.dir/build.make CMakeFiles/project_cuda_512.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -519,6 +557,7 @@ src/main.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/project_par_initial.dir/build.make CMakeFiles/project_par_initial.dir/src/main.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/project_par_second.dir/build.make CMakeFiles/project_par_second.dir/src/main.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/project_cuda.dir/build.make CMakeFiles/project_cuda.dir/src/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/project_cuda_512.dir/build.make CMakeFiles/project_cuda_512.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -531,6 +570,7 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/project_par_initial.dir/build.make CMakeFiles/project_par_initial.dir/src/main.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/project_par_second.dir/build.make CMakeFiles/project_par_second.dir/src/main.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/project_cuda.dir/build.make CMakeFiles/project_cuda.dir/src/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/project_cuda_512.dir/build.make CMakeFiles/project_cuda_512.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
 # Help Target
@@ -555,6 +595,7 @@ help:
 	@echo "... libwb"
 	@echo "... project"
 	@echo "... project_cuda"
+	@echo "... project_cuda_512"
 	@echo "... project_par"
 	@echo "... project_par_initial"
 	@echo "... project_par_second"
@@ -566,6 +607,9 @@ help:
 	@echo "... src/histogram_cuda.o"
 	@echo "... src/histogram_cuda.i"
 	@echo "... src/histogram_cuda.s"
+	@echo "... src/histogram_cuda_512.o"
+	@echo "... src/histogram_cuda_512.i"
+	@echo "... src/histogram_cuda_512.s"
 	@echo "... src/histogram_eq.o"
 	@echo "... src/histogram_eq.i"
 	@echo "... src/histogram_eq.s"

@@ -4,6 +4,7 @@
 /mnt/c/Users/pmtbl/Desktop/project-57514-58172/build/CMakeFiles/project_par_initial.dir
 /mnt/c/Users/pmtbl/Desktop/project-57514-58172/build/CMakeFiles/project_par_second.dir
 /mnt/c/Users/pmtbl/Desktop/project-57514-58172/build/CMakeFiles/project_cuda.dir
+/mnt/c/Users/pmtbl/Desktop/project-57514-58172/build/CMakeFiles/project_cuda_512.dir
 /mnt/c/Users/pmtbl/Desktop/project-57514-58172/build/CMakeFiles/test.dir
 /mnt/c/Users/pmtbl/Desktop/project-57514-58172/build/CMakeFiles/edit_cache.dir
 /mnt/c/Users/pmtbl/Desktop/project-57514-58172/build/CMakeFiles/rebuild_cache.dir

@@ -176,6 +176,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/project_par_initial.dir/DependInfo.cmake"
   "CMakeFiles/project_par_second.dir/DependInfo.cmake"
   "CMakeFiles/project_cuda.dir/DependInfo.cmake"
+  "CMakeFiles/project_cuda_512.dir/DependInfo.cmake"
   "libwb/CMakeFiles/wb.dir/DependInfo.cmake"
   "libwb/CMakeFiles/libwb.dir/DependInfo.cmake"
   "googletest/build/googlemock/CMakeFiles/gmock.dir/DependInfo.cmake"
