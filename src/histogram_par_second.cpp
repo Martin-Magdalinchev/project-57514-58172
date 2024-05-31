@@ -8,7 +8,7 @@
 namespace cp
 {
     constexpr auto HISTOGRAM_LENGTH = 256;
-    constexpr auto NUM_THREADS = 8;
+
 
     static float inline prob(const int x, const int size)
     {
@@ -27,7 +27,7 @@ namespace cp
 
     static void convert_to_uchar(const float *input_image_data, unsigned char *uchar_image, int size_channels)
     {
-#pragma omp parallel for  num_threads(NUM_THREADS)
+#pragma omp parallel for
         for (int i = 0; i < size_channels; i++)
         {
             uchar_image[i] = static_cast<unsigned char>(255 * input_image_data[i]);
@@ -36,7 +36,7 @@ namespace cp
 
     static void convert_to_grayscale(const unsigned char *uchar_image, unsigned char *gray_image, int size)
     {
-#pragma omp parallel for num_threads(NUM_THREADS)
+#pragma omp parallel for
         for (int i = 0; i < size; i++)
         {
             auto r = uchar_image[3 * i];
@@ -51,7 +51,7 @@ namespace cp
 
         std::fill(histogram, histogram + HISTOGRAM_LENGTH, 0);
 
-#pragma omp parallel num_threads(NUM_THREADS)
+#pragma omp parallel
         {
             int local_histogram[HISTOGRAM_LENGTH] = {0}; // Thread-local histogram
 
@@ -84,7 +84,7 @@ namespace cp
     static float find_cdf_min(const float *cdf)
     {
         float cdf_min = cdf[0];
-#pragma omp parallel for reduction(min : cdf_min) num_threads(NUM_THREADS)
+#pragma omp parallel for reduction(min : cdf_min)
         for (int i = 1; i < HISTOGRAM_LENGTH; i++)
         {
             cdf_min = std::min(cdf_min, cdf[i]);
@@ -93,14 +93,14 @@ namespace cp
     }
 
     static void apply_histogram_equalization(unsigned char *uchar_image, const float *cdf, float cdf_min, int size_channels){
-#pragma omp parallel for num_threads(NUM_THREADS)
+#pragma omp parallel for
         for (int i = 0; i < size_channels; i++){
             uchar_image[i] = correct_color(cdf[uchar_image[i]], cdf_min);
         }
     }
 
     static void convert_to_float(unsigned char *uchar_image, float *output_image_data, int size_channels){
-#pragma omp parallel for num_threads(NUM_THREADS)
+#pragma omp parallel for
         for (int i = 0; i < size_channels; i++){
             output_image_data[i] = static_cast<float>(uchar_image[i]) / 255.0f;
         }

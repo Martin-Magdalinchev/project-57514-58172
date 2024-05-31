@@ -1,0 +1,6 @@
+Imagem: ../dataset/borabora_1.ppm
+
+                          |    Initial Parallel      |     Second Parallel      |    Final Parallel       |    Best 
+Iterações  |  Sequencial  |  Total time    Speedup   | Total time     Speedup   | Total time     Speedup  | Time    Speedup
+   10      |     357      |     59          N/A      |     25          N/A      |     25          N/A     |                 
+   15      |     550      |     43          N/A      |     38          N/A      |     34          N/A     |                 
