@@ -30,18 +30,6 @@ namespace cp
                                                       int size,
                                                       int size_channels)
     {
-        // histogram shared with all threads, each writes 1 position
-        // might need to change strategy to write to original histogram
-        extern __shared__ int local_histogram[];
-
-        // Initialize shared histogram
-        for (int i = threadIdx.x; i < HISTOGRAM_LENGTH; i += blockDim.x)
-        {
-            local_histogram[i] = 0;
-        }
-        __syncthreads();
-
-        // Process image and build local histograms
         for (int i = blockIdx.x * blockDim.x + threadIdx.x; i < size; i += blockDim.x * gridDim.x)
         {
             int idx = 3 * i;
@@ -55,14 +43,8 @@ namespace cp
 
             unsigned char gray = static_cast<unsigned char>(0.21f * r + 0.71f * g + 0.07f * b);
             gray_image[i] = gray;
-            atomicAdd(&local_histogram[gray], 1);
-        }
-        __syncthreads();
 
-        // Merge local histograms into the global histogram
-        for (int i = threadIdx.x; i < HISTOGRAM_LENGTH; i += blockDim.x)
-        {
-            atomicAdd(&histogram[i], local_histogram[i]);
+            atomicAdd(&histogram[gray], 1);
         }
     }
 
@@ -113,11 +95,11 @@ namespace cp
         }
     }
 
-    __global__ void apply_histogram_equalization_and_convert_to_float(unsigned char *uchar_image, float *output_image_data, const float *cdf, float cdf_min, int size_channels)
+    __global__ void apply_histogram_equalization_and_convert_to_float(unsigned char *uchar_image, float *output_image_data, const float *cdf, float *cdf_min, int size_channels)
     {
         for (int i = blockIdx.x * blockDim.x + threadIdx.x; i < size_channels; i += blockDim.x * gridDim.x)
         {
-            uchar_image[i] = correct_color(cdf[uchar_image[i]], cdf_min);
+            uchar_image[i] = correct_color(cdf[uchar_image[i]], *cdf_min);
             output_image_data[i] = static_cast<float>(uchar_image[i]) / 255.0f;
         }
     }
@@ -133,22 +115,24 @@ namespace cp
         const auto size_channels = size * 3;
         const auto grid_size = (size_channels + THREADS_PER_BLOCK - 1) / THREADS_PER_BLOCK;
 
+        cudaMemset(histogram, 0, HISTOGRAM_LENGTH * sizeof(int));
+
         process_image_and_build_histogram<<<grid_size, THREADS_PER_BLOCK>>>(
             image_data, uchar_image, gray_image, histogram, size, size_channels);
+        cudaDeviceSynchronize();
 
         calculate_cdf<<<1, HISTOGRAM_LENGTH>>>(histogram, cdf, size);
+        cudaDeviceSynchronize();
 
         float *d_cdf_min;
         cudaMalloc(&d_cdf_min, sizeof(float));
 
-        // need to correct cdf_min
         find_cdf_min<<<1, HISTOGRAM_LENGTH>>>(cdf, d_cdf_min);
-
-        float h_cdf_min; // Host variable to store cdf_min
-        cudaMemcpy(&h_cdf_min, d_cdf_min, sizeof(float), cudaMemcpyDeviceToHost);
+        cudaDeviceSynchronize();
 
         apply_histogram_equalization_and_convert_to_float<<<grid_size, THREADS_PER_BLOCK>>>(
-            uchar_image, image_data, cdf, h_cdf_min, size_channels);
+            uchar_image, image_data, cdf, d_cdf_min, size_channels);
+        cudaDeviceSynchronize();
     }
 
     wbImage_t iterative_histogram_equalization(wbImage_t &input_image, int iterations)
