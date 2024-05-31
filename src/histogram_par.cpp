@@ -89,12 +89,55 @@ namespace cp
         return cdf_min;
     }
 
+//    static void process_image_and_build_histogram(const float *input_image_data,
+//                                                  int *histogram,
+//                                                  int size)
+//    {
+//
+//        std::fill(histogram, histogram + HISTOGRAM_LENGTH, 0);
+//
+//#pragma omp parallel num_threads(NUM_THREADS)
+//        {
+//            /*
+//#pragma omp single
+//    {
+//        std::cout << "Number of threads: " << omp_get_num_threads() << std::endl;
+//    }*/
+//
+//            int local_histogram[HISTOGRAM_LENGTH] = {0};
+//
+//#pragma omp for
+//            for (int i = 0; i < size; i++)
+//            {
+//                // TODO remove the gray_image and uchar image
+//                int idx = 3 * i;
+//                unsigned char r = static_cast<unsigned char>(255 * input_image_data[idx]);
+//                unsigned char g = static_cast<unsigned char>(255 * input_image_data[idx + 1]);
+//                unsigned char b = static_cast<unsigned char>(255 * input_image_data[idx + 2]);
+//
+//                unsigned char gray = static_cast<unsigned char>(
+//                    0.21 * r +
+//                    0.71 * g +
+//                    0.07 * b);
+//
+//                local_histogram[gray]++;
+//            }
+//
+//#pragma omp critical
+//            {
+//                for (int i = 0; i < HISTOGRAM_LENGTH; i++)
+//                {
+//                    histogram[i] += local_histogram[i];
+//                }
+//            }
+//        }
+//    }
+
     static void process_image_and_build_histogram(const float *input_image_data,
                                                   unsigned char *uchar_image,
                                                   unsigned char *gray_image,
                                                   int *histogram,
-                                                  int size,
-                                                  int size_channels)
+                                                  int size)
     {
 
         std::fill(histogram, histogram + HISTOGRAM_LENGTH, 0);
@@ -119,9 +162,9 @@ namespace cp
                 uchar_image[idx + 2] = static_cast<unsigned char>(255 * input_image_data[idx + 2]);
 
                 gray_image[i] = static_cast<unsigned char>(
-                    0.21 * uchar_image[idx] +
-                    0.71 * uchar_image[idx + 1] +
-                    0.07 * uchar_image[idx + 2]);
+                        0.21 * uchar_image[idx] +
+                        0.71 * uchar_image[idx + 1] +
+                        0.07 * uchar_image[idx + 2]);
 
                 local_histogram[gray_image[i]]++;
             }
@@ -158,7 +201,7 @@ namespace cp
         const auto size = width * height;
         const auto size_channels = size * channels;
 
-        process_image_and_build_histogram(input_image_data, uchar_image.get(), gray_image.get(), histogram, size, size_channels);
+        process_image_and_build_histogram(input_image_data,  uchar_image.get(), gray_image.get(), histogram, size);
 
         // convert_to_uchar(input_image_data, uchar_image.get(), size_channels);
         // convert_to_grayscale(uchar_image.get(), gray_image.get(), size);

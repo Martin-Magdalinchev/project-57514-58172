@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/Users/pmtbl/Desktop/project-57514-58172
+CMAKE_SOURCE_DIR = /home/martin/Documents/CP/project-57514-58172
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/Users/pmtbl/Desktop/project-57514-58172/build
+CMAKE_BINARY_DIR = /home/martin/Documents/CP/project-57514-58172/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -142,9 +142,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/pmtbl/Desktop/project-57514-58172/build/CMakeFiles /mnt/c/Users/pmtbl/Desktop/project-57514-58172/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/Documents/CP/project-57514-58172/build/CMakeFiles /home/martin/Documents/CP/project-57514-58172/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/pmtbl/Desktop/project-57514-58172/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/Documents/CP/project-57514-58172/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -209,6 +209,32 @@ project_par: cmake_check_build_system
 project_par/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/project_par.dir/build.make CMakeFiles/project_par.dir/build
 .PHONY : project_par/fast
+
+#=============================================================================
+# Target rules for targets named project_par_initial
+
+# Build rule for target.
+project_par_initial: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 project_par_initial
+.PHONY : project_par_initial
+
+# fast build rule for target.
+project_par_initial/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/project_par_initial.dir/build.make CMakeFiles/project_par_initial.dir/build
+.PHONY : project_par_initial/fast
+
+#=============================================================================
+# Target rules for targets named project_par_second
+
+# Build rule for target.
+project_par_second: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 project_par_second
+.PHONY : project_par_second
+
+# fast build rule for target.
+project_par_second/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/project_par_second.dir/build.make CMakeFiles/project_par_second.dir/build
+.PHONY : project_par_second/fast
 
 #=============================================================================
 # Target rules for targets named wb
@@ -386,6 +412,54 @@ src/histogram_par.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/project_par.dir/build.make CMakeFiles/project_par.dir/src/histogram_par.cpp.s
 .PHONY : src/histogram_par.cpp.s
 
+src/histogram_par_initial.o: src/histogram_par_initial.cpp.o
+.PHONY : src/histogram_par_initial.o
+
+# target to build an object file
+src/histogram_par_initial.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/project_par_initial.dir/build.make CMakeFiles/project_par_initial.dir/src/histogram_par_initial.cpp.o
+.PHONY : src/histogram_par_initial.cpp.o
+
+src/histogram_par_initial.i: src/histogram_par_initial.cpp.i
+.PHONY : src/histogram_par_initial.i
+
+# target to preprocess a source file
+src/histogram_par_initial.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/project_par_initial.dir/build.make CMakeFiles/project_par_initial.dir/src/histogram_par_initial.cpp.i
+.PHONY : src/histogram_par_initial.cpp.i
+
+src/histogram_par_initial.s: src/histogram_par_initial.cpp.s
+.PHONY : src/histogram_par_initial.s
+
+# target to generate assembly for a file
+src/histogram_par_initial.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/project_par_initial.dir/build.make CMakeFiles/project_par_initial.dir/src/histogram_par_initial.cpp.s
+.PHONY : src/histogram_par_initial.cpp.s
+
+src/histogram_par_second.o: src/histogram_par_second.cpp.o
+.PHONY : src/histogram_par_second.o
+
+# target to build an object file
+src/histogram_par_second.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/project_par_second.dir/build.make CMakeFiles/project_par_second.dir/src/histogram_par_second.cpp.o
+.PHONY : src/histogram_par_second.cpp.o
+
+src/histogram_par_second.i: src/histogram_par_second.cpp.i
+.PHONY : src/histogram_par_second.i
+
+# target to preprocess a source file
+src/histogram_par_second.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/project_par_second.dir/build.make CMakeFiles/project_par_second.dir/src/histogram_par_second.cpp.i
+.PHONY : src/histogram_par_second.cpp.i
+
+src/histogram_par_second.s: src/histogram_par_second.cpp.s
+.PHONY : src/histogram_par_second.s
+
+# target to generate assembly for a file
+src/histogram_par_second.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/project_par_second.dir/build.make CMakeFiles/project_par_second.dir/src/histogram_par_second.cpp.s
+.PHONY : src/histogram_par_second.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -393,6 +467,8 @@ src/main.o: src/main.cpp.o
 src/main.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/src/main.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/project_par.dir/build.make CMakeFiles/project_par.dir/src/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/project_par_initial.dir/build.make CMakeFiles/project_par_initial.dir/src/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/project_par_second.dir/build.make CMakeFiles/project_par_second.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -402,6 +478,8 @@ src/main.i: src/main.cpp.i
 src/main.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/src/main.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/project_par.dir/build.make CMakeFiles/project_par.dir/src/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/project_par_initial.dir/build.make CMakeFiles/project_par_initial.dir/src/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/project_par_second.dir/build.make CMakeFiles/project_par_second.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -411,6 +489,8 @@ src/main.s: src/main.cpp.s
 src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/src/main.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/project_par.dir/build.make CMakeFiles/project_par.dir/src/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/project_par_initial.dir/build.make CMakeFiles/project_par_initial.dir/src/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/project_par_second.dir/build.make CMakeFiles/project_par_second.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
 # Help Target
@@ -435,6 +515,8 @@ help:
 	@echo "... libwb"
 	@echo "... project"
 	@echo "... project_par"
+	@echo "... project_par_initial"
+	@echo "... project_par_second"
 	@echo "... template_test"
 	@echo "... wb"
 	@echo "... src/dataset_generator.o"
@@ -446,6 +528,12 @@ help:
 	@echo "... src/histogram_par.o"
 	@echo "... src/histogram_par.i"
 	@echo "... src/histogram_par.s"
+	@echo "... src/histogram_par_initial.o"
+	@echo "... src/histogram_par_initial.i"
+	@echo "... src/histogram_par_initial.s"
+	@echo "... src/histogram_par_second.o"
+	@echo "... src/histogram_par_second.i"
+	@echo "... src/histogram_par_second.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

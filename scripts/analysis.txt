@@ -1,0 +1,51 @@
+imagem: 3000x2500 px
+
+Sequential Version:
+Iterações    Tempo de Execução
+    10              5610 ms
+    15              8538 ms
+    20              10523 ms
+    50              27372 ms
+    100             54588 ms
+
+Parallelized Version:
+
+Initial parallelization
+Iterações    Tempo de Execução
+    10              1065 ms
+    15              1606 ms
+    20              2090 ms
+    50              5954 ms
+    100             10863 ms
+    1000            108076 ms
+
+Speedup:
+    100 iterations speedup = 54588/10863 = 5.02
+
+Second parallelization
+num_threads = 8
+Iterações    Tempo de Execução
+    10              398 ms
+    15              597 ms
+    20              930 ms
+    50              1901 ms
+    100             4106 ms
+    1000            42354 ms
+    2000            83329 ms
+
+Speedup:
+    100 iterations speedup = 54588/4106 = 13.29
+
+Final parallelization
+num_threads = 8
+Iterações    Tempo de Execução
+    10              2625 ms
+    15              1631 ms
+    20              2078 ms
+    50              3279 ms
+    100             4854 ms
+    1000            36806 ms
+    2000            80561 ms
+
+Speedup:
+    100 iterations speedup = 54588/4854 = 11.24

@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.16)
-project(project LANGUAGES CXX CUDA)
+#project(project LANGUAGES CXX CUDA)
 
 set(CMAKE_CXX_STANDARD 17)
 
@@ -20,18 +20,18 @@ include_directories(libwb)
 ##############################################################
 # Autodetect CUDA architecture(s)
 ##############################################################
-
-include(FindCUDA/select_compute_arch)
-CUDA_DETECT_INSTALLED_GPUS(INSTALLED_GPU_CCS_1)
-string(STRIP "${INSTALLED_GPU_CCS_1}" INSTALLED_GPU_CCS_2)
-string(REPLACE " " ";" INSTALLED_GPU_CCS_3 "${INSTALLED_GPU_CCS_2}")
-string(REPLACE "." "" CUDA_ARCH_LIST "${INSTALLED_GPU_CCS_3}")
-SET(CMAKE_CUDA_ARCHITECTURES ${CUDA_ARCH_LIST})
-set_property(GLOBAL PROPERTY CUDA_ARCHITECTURES "${CUDA_ARCH_LIST}")
-
-cuda_select_nvcc_arch_flags(ARCH_FLAGS Auto)
-list(APPEND CUDA_NVCC_FLAGS ${ARCH_FLAGS})
-message("-- CUDA Architecture(s): " ${CMAKE_CUDA_ARCHITECTURES})
+#
+#include(FindCUDA/select_compute_arch)
+#CUDA_DETECT_INSTALLED_GPUS(INSTALLED_GPU_CCS_1)
+#string(STRIP "${INSTALLED_GPU_CCS_1}" INSTALLED_GPU_CCS_2)
+#string(REPLACE " " ";" INSTALLED_GPU_CCS_3 "${INSTALLED_GPU_CCS_2}")
+#string(REPLACE "." "" CUDA_ARCH_LIST "${INSTALLED_GPU_CCS_3}")
+#SET(CMAKE_CUDA_ARCHITECTURES ${CUDA_ARCH_LIST})
+#set_property(GLOBAL PROPERTY CUDA_ARCHITECTURES "${CUDA_ARCH_LIST}")
+#
+#cuda_select_nvcc_arch_flags(ARCH_FLAGS Auto)
+#list(APPEND CUDA_NVCC_FLAGS ${ARCH_FLAGS})
+#message("-- CUDA Architecture(s): " ${CMAKE_CUDA_ARCHITECTURES})
 
 ###############
 # project
@@ -66,6 +66,25 @@ add_executable(project_par
 )
 
 target_link_libraries(project_par PUBLIC wb PUBLIC OpenMP::OpenMP_CXX)
+
+###############
+# project_par_initial
+###############
+add_executable(project_par_initial
+        src/main.cpp
+        src/histogram_par_initial.cpp)
+
+target_link_libraries(project_par_initial PUBLIC wb PUBLIC OpenMP::OpenMP_CXX)
+
+
+###############
+# project_par_second
+###############
+add_executable(project_par_second
+        src/main.cpp
+        src/histogram_par_second.cpp)
+
+target_link_libraries(project_par_second PUBLIC wb PUBLIC OpenMP::OpenMP_CXX)
 
 ###############
 # project_cuda
@@ -119,3 +138,4 @@ add_subdirectory(${GTEST_HOME}/src
 set (GTEST_BOTH_LIBRARIES gtest_main gtest)
 
 add_subdirectory (test)
+

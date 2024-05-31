@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/Users/pmtbl/Desktop/project-57514-58172
+CMAKE_SOURCE_DIR = /home/martin/Documents/CP/project-57514-58172
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/Users/pmtbl/Desktop/project-57514-58172/build
+CMAKE_BINARY_DIR = /home/martin/Documents/CP/project-57514-58172/build
 
 # Include any dependencies generated for this target.
 include test/CMakeFiles/histogram_eq_test.dir/depend.make
@@ -72,30 +72,30 @@ include test/CMakeFiles/histogram_eq_test.dir/flags.make
 test/CMakeFiles/histogram_eq_test.dir/histogram_eq_test.cpp.o: test/CMakeFiles/histogram_eq_test.dir/flags.make
 test/CMakeFiles/histogram_eq_test.dir/histogram_eq_test.cpp.o: ../test/histogram_eq_test.cpp
 test/CMakeFiles/histogram_eq_test.dir/histogram_eq_test.cpp.o: test/CMakeFiles/histogram_eq_test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/pmtbl/Desktop/project-57514-58172/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object test/CMakeFiles/histogram_eq_test.dir/histogram_eq_test.cpp.o"
-	cd /mnt/c/Users/pmtbl/Desktop/project-57514-58172/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT test/CMakeFiles/histogram_eq_test.dir/histogram_eq_test.cpp.o -MF CMakeFiles/histogram_eq_test.dir/histogram_eq_test.cpp.o.d -o CMakeFiles/histogram_eq_test.dir/histogram_eq_test.cpp.o -c /mnt/c/Users/pmtbl/Desktop/project-57514-58172/test/histogram_eq_test.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/martin/Documents/CP/project-57514-58172/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object test/CMakeFiles/histogram_eq_test.dir/histogram_eq_test.cpp.o"
+	cd /home/martin/Documents/CP/project-57514-58172/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT test/CMakeFiles/histogram_eq_test.dir/histogram_eq_test.cpp.o -MF CMakeFiles/histogram_eq_test.dir/histogram_eq_test.cpp.o.d -o CMakeFiles/histogram_eq_test.dir/histogram_eq_test.cpp.o -c /home/martin/Documents/CP/project-57514-58172/test/histogram_eq_test.cpp
 
 test/CMakeFiles/histogram_eq_test.dir/histogram_eq_test.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/histogram_eq_test.dir/histogram_eq_test.cpp.i"
-	cd /mnt/c/Users/pmtbl/Desktop/project-57514-58172/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/pmtbl/Desktop/project-57514-58172/test/histogram_eq_test.cpp > CMakeFiles/histogram_eq_test.dir/histogram_eq_test.cpp.i
+	cd /home/martin/Documents/CP/project-57514-58172/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/martin/Documents/CP/project-57514-58172/test/histogram_eq_test.cpp > CMakeFiles/histogram_eq_test.dir/histogram_eq_test.cpp.i
 
 test/CMakeFiles/histogram_eq_test.dir/histogram_eq_test.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/histogram_eq_test.dir/histogram_eq_test.cpp.s"
-	cd /mnt/c/Users/pmtbl/Desktop/project-57514-58172/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/pmtbl/Desktop/project-57514-58172/test/histogram_eq_test.cpp -o CMakeFiles/histogram_eq_test.dir/histogram_eq_test.cpp.s
+	cd /home/martin/Documents/CP/project-57514-58172/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/martin/Documents/CP/project-57514-58172/test/histogram_eq_test.cpp -o CMakeFiles/histogram_eq_test.dir/histogram_eq_test.cpp.s
 
 test/CMakeFiles/histogram_eq_test.dir/__/src/histogram_eq.cpp.o: test/CMakeFiles/histogram_eq_test.dir/flags.make
 test/CMakeFiles/histogram_eq_test.dir/__/src/histogram_eq.cpp.o: ../src/histogram_eq.cpp
 test/CMakeFiles/histogram_eq_test.dir/__/src/histogram_eq.cpp.o: test/CMakeFiles/histogram_eq_test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/pmtbl/Desktop/project-57514-58172/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object test/CMakeFiles/histogram_eq_test.dir/__/src/histogram_eq.cpp.o"
-	cd /mnt/c/Users/pmtbl/Desktop/project-57514-58172/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT test/CMakeFiles/histogram_eq_test.dir/__/src/histogram_eq.cpp.o -MF CMakeFiles/histogram_eq_test.dir/__/src/histogram_eq.cpp.o.d -o CMakeFiles/histogram_eq_test.dir/__/src/histogram_eq.cpp.o -c /mnt/c/Users/pmtbl/Desktop/project-57514-58172/src/histogram_eq.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/martin/Documents/CP/project-57514-58172/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object test/CMakeFiles/histogram_eq_test.dir/__/src/histogram_eq.cpp.o"
+	cd /home/martin/Documents/CP/project-57514-58172/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT test/CMakeFiles/histogram_eq_test.dir/__/src/histogram_eq.cpp.o -MF CMakeFiles/histogram_eq_test.dir/__/src/histogram_eq.cpp.o.d -o CMakeFiles/histogram_eq_test.dir/__/src/histogram_eq.cpp.o -c /home/martin/Documents/CP/project-57514-58172/src/histogram_eq.cpp
 
 test/CMakeFiles/histogram_eq_test.dir/__/src/histogram_eq.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/histogram_eq_test.dir/__/src/histogram_eq.cpp.i"
-	cd /mnt/c/Users/pmtbl/Desktop/project-57514-58172/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/pmtbl/Desktop/project-57514-58172/src/histogram_eq.cpp > CMakeFiles/histogram_eq_test.dir/__/src/histogram_eq.cpp.i
+	cd /home/martin/Documents/CP/project-57514-58172/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/martin/Documents/CP/project-57514-58172/src/histogram_eq.cpp > CMakeFiles/histogram_eq_test.dir/__/src/histogram_eq.cpp.i
 
 test/CMakeFiles/histogram_eq_test.dir/__/src/histogram_eq.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/histogram_eq_test.dir/__/src/histogram_eq.cpp.s"
-	cd /mnt/c/Users/pmtbl/Desktop/project-57514-58172/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/pmtbl/Desktop/project-57514-58172/src/histogram_eq.cpp -o CMakeFiles/histogram_eq_test.dir/__/src/histogram_eq.cpp.s
+	cd /home/martin/Documents/CP/project-57514-58172/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/martin/Documents/CP/project-57514-58172/src/histogram_eq.cpp -o CMakeFiles/histogram_eq_test.dir/__/src/histogram_eq.cpp.s
 
 # Object files for target histogram_eq_test
 histogram_eq_test_OBJECTS = \
@@ -112,18 +112,18 @@ test/histogram_eq_test: lib/libgtest_main.a
 test/histogram_eq_test: lib/libgtest.a
 test/histogram_eq_test: libwb/libwb.a
 test/histogram_eq_test: test/CMakeFiles/histogram_eq_test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/pmtbl/Desktop/project-57514-58172/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable histogram_eq_test"
-	cd /mnt/c/Users/pmtbl/Desktop/project-57514-58172/build/test && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/histogram_eq_test.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/martin/Documents/CP/project-57514-58172/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable histogram_eq_test"
+	cd /home/martin/Documents/CP/project-57514-58172/build/test && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/histogram_eq_test.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 test/CMakeFiles/histogram_eq_test.dir/build: test/histogram_eq_test
 .PHONY : test/CMakeFiles/histogram_eq_test.dir/build
 
 test/CMakeFiles/histogram_eq_test.dir/clean:
-	cd /mnt/c/Users/pmtbl/Desktop/project-57514-58172/build/test && $(CMAKE_COMMAND) -P CMakeFiles/histogram_eq_test.dir/cmake_clean.cmake
+	cd /home/martin/Documents/CP/project-57514-58172/build/test && $(CMAKE_COMMAND) -P CMakeFiles/histogram_eq_test.dir/cmake_clean.cmake
 .PHONY : test/CMakeFiles/histogram_eq_test.dir/clean
 
 test/CMakeFiles/histogram_eq_test.dir/depend:
-	cd /mnt/c/Users/pmtbl/Desktop/project-57514-58172/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/Users/pmtbl/Desktop/project-57514-58172 /mnt/c/Users/pmtbl/Desktop/project-57514-58172/test /mnt/c/Users/pmtbl/Desktop/project-57514-58172/build /mnt/c/Users/pmtbl/Desktop/project-57514-58172/build/test /mnt/c/Users/pmtbl/Desktop/project-57514-58172/build/test/CMakeFiles/histogram_eq_test.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/martin/Documents/CP/project-57514-58172/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/martin/Documents/CP/project-57514-58172 /home/martin/Documents/CP/project-57514-58172/test /home/martin/Documents/CP/project-57514-58172/build /home/martin/Documents/CP/project-57514-58172/build/test /home/martin/Documents/CP/project-57514-58172/build/test/CMakeFiles/histogram_eq_test.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : test/CMakeFiles/histogram_eq_test.dir/depend
 
