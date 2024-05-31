@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/mnt/c/Users/pmtbl/Desktop/project-57514-58172/libwb -I/mnt/c/Users/pmtbl/Desktop/project-57514-58172/include
+CXX_INCLUDES = -I/home/martin/Documents/CP/project-57514-58172/libwb -I/home/martin/Documents/CP/project-57514-58172/include
 
-CXX_FLAGS = -fopenmp -std=gnu++17
+CXX_FLAGS = -fopenmp
 

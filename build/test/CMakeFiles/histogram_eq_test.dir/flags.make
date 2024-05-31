@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/mnt/c/Users/pmtbl/Desktop/project-57514-58172/libwb -I/mnt/c/Users/pmtbl/Desktop/project-57514-58172/include -isystem /mnt/c/Users/pmtbl/Desktop/project-57514-58172/build/googletest/src/googletest/include -isystem /mnt/c/Users/pmtbl/Desktop/project-57514-58172/build/googletest/src/googletest
+CXX_INCLUDES = -I/home/martin/Documents/CP/project-57514-58172/libwb -I/home/martin/Documents/CP/project-57514-58172/include -isystem /home/martin/Documents/CP/project-57514-58172/build/googletest/src/googletest/include -isystem /home/martin/Documents/CP/project-57514-58172/build/googletest/src/googletest
 
-CXX_FLAGS = -std=gnu++17
+CXX_FLAGS = 
 

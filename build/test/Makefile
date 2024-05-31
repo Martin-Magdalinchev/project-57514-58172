@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/Users/pmtbl/Desktop/project-57514-58172
+CMAKE_SOURCE_DIR = /home/martin/Documents/CP/project-57514-58172
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/Users/pmtbl/Desktop/project-57514-58172/build
+CMAKE_BINARY_DIR = /home/martin/Documents/CP/project-57514-58172/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -142,14 +142,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /mnt/c/Users/pmtbl/Desktop/project-57514-58172/build && $(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/pmtbl/Desktop/project-57514-58172/build/CMakeFiles /mnt/c/Users/pmtbl/Desktop/project-57514-58172/build/test//CMakeFiles/progress.marks
-	cd /mnt/c/Users/pmtbl/Desktop/project-57514-58172/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/pmtbl/Desktop/project-57514-58172/build/CMakeFiles 0
+	cd /home/martin/Documents/CP/project-57514-58172/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/martin/Documents/CP/project-57514-58172/build/CMakeFiles /home/martin/Documents/CP/project-57514-58172/build/test//CMakeFiles/progress.marks
+	cd /home/martin/Documents/CP/project-57514-58172/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/Documents/CP/project-57514-58172/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /mnt/c/Users/pmtbl/Desktop/project-57514-58172/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/clean
+	cd /home/martin/Documents/CP/project-57514-58172/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/clean
 .PHONY : clean
 
 # The main clean target
@@ -158,22 +158,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /mnt/c/Users/pmtbl/Desktop/project-57514-58172/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/preinstall
+	cd /home/martin/Documents/CP/project-57514-58172/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /mnt/c/Users/pmtbl/Desktop/project-57514-58172/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/preinstall
+	cd /home/martin/Documents/CP/project-57514-58172/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /mnt/c/Users/pmtbl/Desktop/project-57514-58172/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/martin/Documents/CP/project-57514-58172/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 test/CMakeFiles/template_test.dir/rule:
-	cd /mnt/c/Users/pmtbl/Desktop/project-57514-58172/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/CMakeFiles/template_test.dir/rule
+	cd /home/martin/Documents/CP/project-57514-58172/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/CMakeFiles/template_test.dir/rule
 .PHONY : test/CMakeFiles/template_test.dir/rule
 
 # Convenience name for target.
@@ -182,12 +182,12 @@ template_test: test/CMakeFiles/template_test.dir/rule
 
 # fast build rule for target.
 template_test/fast:
-	cd /mnt/c/Users/pmtbl/Desktop/project-57514-58172/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/template_test.dir/build.make test/CMakeFiles/template_test.dir/build
+	cd /home/martin/Documents/CP/project-57514-58172/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/template_test.dir/build.make test/CMakeFiles/template_test.dir/build
 .PHONY : template_test/fast
 
 # Convenience name for target.
 test/CMakeFiles/histogram_eq_test.dir/rule:
-	cd /mnt/c/Users/pmtbl/Desktop/project-57514-58172/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/CMakeFiles/histogram_eq_test.dir/rule
+	cd /home/martin/Documents/CP/project-57514-58172/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/CMakeFiles/histogram_eq_test.dir/rule
 .PHONY : test/CMakeFiles/histogram_eq_test.dir/rule
 
 # Convenience name for target.
@@ -196,7 +196,7 @@ histogram_eq_test: test/CMakeFiles/histogram_eq_test.dir/rule
 
 # fast build rule for target.
 histogram_eq_test/fast:
-	cd /mnt/c/Users/pmtbl/Desktop/project-57514-58172/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/histogram_eq_test.dir/build.make test/CMakeFiles/histogram_eq_test.dir/build
+	cd /home/martin/Documents/CP/project-57514-58172/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/histogram_eq_test.dir/build.make test/CMakeFiles/histogram_eq_test.dir/build
 .PHONY : histogram_eq_test/fast
 
 __/src/histogram_eq.o: __/src/histogram_eq.cpp.o
@@ -204,7 +204,7 @@ __/src/histogram_eq.o: __/src/histogram_eq.cpp.o
 
 # target to build an object file
 __/src/histogram_eq.cpp.o:
-	cd /mnt/c/Users/pmtbl/Desktop/project-57514-58172/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/histogram_eq_test.dir/build.make test/CMakeFiles/histogram_eq_test.dir/__/src/histogram_eq.cpp.o
+	cd /home/martin/Documents/CP/project-57514-58172/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/histogram_eq_test.dir/build.make test/CMakeFiles/histogram_eq_test.dir/__/src/histogram_eq.cpp.o
 .PHONY : __/src/histogram_eq.cpp.o
 
 __/src/histogram_eq.i: __/src/histogram_eq.cpp.i
@@ -212,7 +212,7 @@ __/src/histogram_eq.i: __/src/histogram_eq.cpp.i
 
 # target to preprocess a source file
 __/src/histogram_eq.cpp.i:
-	cd /mnt/c/Users/pmtbl/Desktop/project-57514-58172/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/histogram_eq_test.dir/build.make test/CMakeFiles/histogram_eq_test.dir/__/src/histogram_eq.cpp.i
+	cd /home/martin/Documents/CP/project-57514-58172/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/histogram_eq_test.dir/build.make test/CMakeFiles/histogram_eq_test.dir/__/src/histogram_eq.cpp.i
 .PHONY : __/src/histogram_eq.cpp.i
 
 __/src/histogram_eq.s: __/src/histogram_eq.cpp.s
@@ -220,7 +220,7 @@ __/src/histogram_eq.s: __/src/histogram_eq.cpp.s
 
 # target to generate assembly for a file
 __/src/histogram_eq.cpp.s:
-	cd /mnt/c/Users/pmtbl/Desktop/project-57514-58172/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/histogram_eq_test.dir/build.make test/CMakeFiles/histogram_eq_test.dir/__/src/histogram_eq.cpp.s
+	cd /home/martin/Documents/CP/project-57514-58172/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/histogram_eq_test.dir/build.make test/CMakeFiles/histogram_eq_test.dir/__/src/histogram_eq.cpp.s
 .PHONY : __/src/histogram_eq.cpp.s
 
 histogram_eq_test.o: histogram_eq_test.cpp.o
@@ -228,7 +228,7 @@ histogram_eq_test.o: histogram_eq_test.cpp.o
 
 # target to build an object file
 histogram_eq_test.cpp.o:
-	cd /mnt/c/Users/pmtbl/Desktop/project-57514-58172/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/histogram_eq_test.dir/build.make test/CMakeFiles/histogram_eq_test.dir/histogram_eq_test.cpp.o
+	cd /home/martin/Documents/CP/project-57514-58172/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/histogram_eq_test.dir/build.make test/CMakeFiles/histogram_eq_test.dir/histogram_eq_test.cpp.o
 .PHONY : histogram_eq_test.cpp.o
 
 histogram_eq_test.i: histogram_eq_test.cpp.i
@@ -236,7 +236,7 @@ histogram_eq_test.i: histogram_eq_test.cpp.i
 
 # target to preprocess a source file
 histogram_eq_test.cpp.i:
-	cd /mnt/c/Users/pmtbl/Desktop/project-57514-58172/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/histogram_eq_test.dir/build.make test/CMakeFiles/histogram_eq_test.dir/histogram_eq_test.cpp.i
+	cd /home/martin/Documents/CP/project-57514-58172/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/histogram_eq_test.dir/build.make test/CMakeFiles/histogram_eq_test.dir/histogram_eq_test.cpp.i
 .PHONY : histogram_eq_test.cpp.i
 
 histogram_eq_test.s: histogram_eq_test.cpp.s
@@ -244,7 +244,7 @@ histogram_eq_test.s: histogram_eq_test.cpp.s
 
 # target to generate assembly for a file
 histogram_eq_test.cpp.s:
-	cd /mnt/c/Users/pmtbl/Desktop/project-57514-58172/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/histogram_eq_test.dir/build.make test/CMakeFiles/histogram_eq_test.dir/histogram_eq_test.cpp.s
+	cd /home/martin/Documents/CP/project-57514-58172/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/histogram_eq_test.dir/build.make test/CMakeFiles/histogram_eq_test.dir/histogram_eq_test.cpp.s
 .PHONY : histogram_eq_test.cpp.s
 
 template_test.o: template_test.cpp.o
@@ -252,7 +252,7 @@ template_test.o: template_test.cpp.o
 
 # target to build an object file
 template_test.cpp.o:
-	cd /mnt/c/Users/pmtbl/Desktop/project-57514-58172/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/template_test.dir/build.make test/CMakeFiles/template_test.dir/template_test.cpp.o
+	cd /home/martin/Documents/CP/project-57514-58172/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/template_test.dir/build.make test/CMakeFiles/template_test.dir/template_test.cpp.o
 .PHONY : template_test.cpp.o
 
 template_test.i: template_test.cpp.i
@@ -260,7 +260,7 @@ template_test.i: template_test.cpp.i
 
 # target to preprocess a source file
 template_test.cpp.i:
-	cd /mnt/c/Users/pmtbl/Desktop/project-57514-58172/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/template_test.dir/build.make test/CMakeFiles/template_test.dir/template_test.cpp.i
+	cd /home/martin/Documents/CP/project-57514-58172/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/template_test.dir/build.make test/CMakeFiles/template_test.dir/template_test.cpp.i
 .PHONY : template_test.cpp.i
 
 template_test.s: template_test.cpp.s
@@ -268,7 +268,7 @@ template_test.s: template_test.cpp.s
 
 # target to generate assembly for a file
 template_test.cpp.s:
-	cd /mnt/c/Users/pmtbl/Desktop/project-57514-58172/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/template_test.dir/build.make test/CMakeFiles/template_test.dir/template_test.cpp.s
+	cd /home/martin/Documents/CP/project-57514-58172/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/template_test.dir/build.make test/CMakeFiles/template_test.dir/template_test.cpp.s
 .PHONY : template_test.cpp.s
 
 # Help Target
@@ -306,6 +306,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /mnt/c/Users/pmtbl/Desktop/project-57514-58172/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/martin/Documents/CP/project-57514-58172/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

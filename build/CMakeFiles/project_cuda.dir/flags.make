@@ -5,13 +5,13 @@
 # compile CXX with /usr/bin/c++
 CUDA_DEFINES = 
 
-CUDA_INCLUDES = -I/mnt/c/Users/pmtbl/Desktop/project-57514-58172/libwb -I/mnt/c/Users/pmtbl/Desktop/project-57514-58172/include
+CUDA_INCLUDES = -I/home/martin/Documents/CP/project-57514-58172/libwb -I/home/martin/Documents/CP/project-57514-58172/include
 
-CUDA_FLAGS =  --generate-code=arch=compute_61,code=[compute_61,sm_61]
+CUDA_FLAGS =  --generate-code=arch=compute_53,code=[compute_53,sm_53] --generate-code=arch=compute_60,code=[compute_60,sm_60] --generate-code=arch=compute_61,code=[compute_61,sm_61] --generate-code=arch=compute_70,code=[compute_70,sm_70] --generate-code=arch=compute_75,code=[compute_75,sm_75] --generate-code=arch=compute_80,code=[compute_80,sm_80] --generate-code=arch=compute_86,code=[compute_86,sm_86]
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/mnt/c/Users/pmtbl/Desktop/project-57514-58172/libwb -I/mnt/c/Users/pmtbl/Desktop/project-57514-58172/include
+CXX_INCLUDES = -I/home/martin/Documents/CP/project-57514-58172/libwb -I/home/martin/Documents/CP/project-57514-58172/include
 
-CXX_FLAGS = -std=gnu++17
+CXX_FLAGS = 
 

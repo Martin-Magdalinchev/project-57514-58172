@@ -1,51 +1,39 @@
-imagem: 3000x2500 px
+Imagem: ../dataset/in1.ppm
 
-Sequential Version:
-Iterações    Tempo de Execução
-    10              5610 ms
-    15              8538 ms
-    20              10523 ms
-    50              27372 ms
-    100             54588 ms
+                       | Initial Parallel |                      Second Parallel                   |                     Final Parallel                     |          Best 
+Iterações | Sequencial |                  |    4 Threads     |     8 Threads    |    12 Threads    |    4 Threads     |     8 Threads    |    12 Threads    | 
+          |            |Total time Speedup|Total time Speedup|Total time Speedup|Total time Speedup|Total time Speedup|Total time Speedup|Total time Speedup|Time Speedup Architecture
+__________|____________|__________________|__________________|__________________|__________________|__________________|__________________|__________________|_________________________
+  10      |   6057     |   1049      5.77 |   384     15.77  |  402       15.06 |  424       14.28 |   383     15.81  |  396       15.29 |  361       16.77 |361   16.77  Final Parallel with 12 threads
+  15      |   10272    |   1608      6.38 |   583     17.61  |  1218      8.43  |  632       16.25 |   594     17.29  |  572       17.95 |  559       18.37 |559   18.37  Final Parallel with 12 threads
+  25      |   14641    |   2728      5.36 |   1467    9.98   |  1006      14.55 |  1014      14.43 |   950     15.41  |  912       16.05 |  924       15.84 |912   16.05  Final Parallel with 8 threads
+  50      |   27348    |   5703      4.79 |   2804    9.75   |  2030      13.47 |  2177      12.56 |   2411    11.34  |  1848      14.79 |  1874      14.59 |1848  14.79  Final Parallel with 8 threads
 
-Parallelized Version:
+===============================================================================================================================================================================================================================
 
-Initial parallelization
-Iterações    Tempo de Execução
-    10              1065 ms
-    15              1606 ms
-    20              2090 ms
-    50              5954 ms
-    100             10863 ms
-    1000            108076 ms
+Imagem: ../dataset/sample_5184×3456.ppm
 
-Speedup:
-    100 iterations speedup = 54588/10863 = 5.02
+                       | Initial Parallel |                      Second Parallel                   |                     Final Parallel                     |          Best 
+Iterações | Sequencial |                  |    4 Threads     |     8 Threads    |    12 Threads    |    4 Threads     |     8 Threads    |    12 Threads    | 
+          |            |Total time Speedup|Total time Speedup|Total time Speedup|Total time Speedup|Total time Speedup|Total time Speedup|Total time Speedup|Time Speedup Architecture
+__________|____________|__________________|__________________|__________________|__________________|__________________|__________________|__________________|_________________________
+  10      |   13423    |   1413      9.49 |   930     14.43  |  944       14.21 |  961       13.96 |   851     15.77  |  862       15.57 |  862       15.57 |851   15.77  Final Parallel with 4 threads
+  15      |   19907    |   2081      9.56 |   1438    13.84  |  1402      14.19 |  1397      14.24 |   1258    15.82  |  1264      15.74 |  1544      12.89 |1258  15.82  Final Parallel with 4 threads
+  25      |   32526    |   3409      9.54 |   2679    12.14  |  2351      13.83 |  2308      14.09 |   2097    15.51  |  2107      15.43 |  2076      15.66 |2076  15.66  Final Parallel with 12 threads
+  50      |   65310    |   7024      9.29 |   4611    14.16  |  5113      12.77 |  4728      13.81 |   4138    15.78  |  4532      14.41 |  4117      15.86 |4117  15.86  Final Parallel with 12 threads
 
-Second parallelization
-num_threads = 8
-Iterações    Tempo de Execução
-    10              398 ms
-    15              597 ms
-    20              930 ms
-    50              1901 ms
-    100             4106 ms
-    1000            42354 ms
-    2000            83329 ms
+===============================================================================================================================================================================================================================
 
-Speedup:
-    100 iterations speedup = 54588/4106 = 13.29
+Imagem: ../dataset/borabora_1.ppm
 
-Final parallelization
-num_threads = 8
-Iterações    Tempo de Execução
-    10              2625 ms
-    15              1631 ms
-    20              2078 ms
-    50              3279 ms
-    100             4854 ms
-    1000            36806 ms
-    2000            80561 ms
+                       | Initial Parallel |                      Second Parallel                   |                     Final Parallel                     |          Best 
+Iterações | Sequencial |                  |    4 Threads     |     8 Threads    |    12 Threads    |    4 Threads     |     8 Threads    |    12 Threads    | 
+          |            |Total time Speedup|Total time Speedup|Total time Speedup|Total time Speedup|Total time Speedup|Total time Speedup|Total time Speedup|Time Speedup Architecture
+__________|____________|__________________|__________________|__________________|__________________|__________________|__________________|__________________|_________________________
+  10      |   360      |   56        6.42 |   39      9.23   |  36        10.00 |  52        6.92  |   25      14.40  |  53        6.79  |  28        12.85 |25    14.40  Final Parallel with 4 threads
+  15      |   539      |   85        6.34 |   78      6.91   |  47        11.46 |  42        12.83 |   42      12.83  |  47        11.46 |  48        11.22 |42    12.83  Second Parallel with 12 threads
+  25      |   924      |   80        11.55|   85      10.87  |  83        11.13 |  90        10.26 |   68      13.58  |  79        11.69 |  84        11.00 |68    13.58  Final Parallel with 4 threads
+  50      |   1778     |   149       11.93|   130     13.67  |  131       13.57 |  125       14.22 |   115     15.46  |  122       14.57 |  162       10.97 |115   15.46  Final Parallel with 4 threads
 
-Speedup:
-    100 iterations speedup = 54588/4854 = 11.24
+===============================================================================================================================================================================================================================
+
