@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/project_cuda.dir/src/main.cpp.o CMakeFiles/project_cuda.dir/src/histogram_cuda.cu.o -o project_cuda   -L/usr/local/cuda-11.8/targets/x86_64-linux/lib/stubs  -L/usr/local/cuda-11.8/targets/x86_64-linux/lib  libwb/libwb.a -lcudadevrt -lcudart_static -lrt -lpthread -ldl 

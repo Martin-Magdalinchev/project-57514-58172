@@ -2,94 +2,160 @@
 \settopmatter{printacmref=false, printccs=false, printfolios=true}
 \renewcommand\footnotetextcopyrightpermission[1]{}
 
-
 \usepackage{booktabs} % For formal tables
 
-
-
-
 \begin{document}
-\title{SIG Proceedings Paper in LaTeX Format}
-
-
-\author{Firstname Lastname}
-\email{email@domain.com}
+\title{Iterative Histogram Equalization}
 
 \author{Firstname Lastname}
 \email{email@domain.com}
 
-
-\begin{abstract}
-This paper provides a sample of a \LaTeX\ document which conforms,
-somewhat loosely, to the formatting guidelines for
-ACM SIG Proceedings.\footnote{This is an abstract footnote}
-\end{abstract}
-
-% We no longer use \terms command
-%\terms{Theory}
-
-\keywords{ACM proceedings}
-
+\author{Matin Magdalinchev}
+\email{m.magdalinchev@campus.fct.unl.pt}
 
 \maketitle
 
-\section{Section}
+\section{Overview}
+To develop this project, we analysed the given files and started by creating new file for each architectural version. This way, we can separately run and test each one of the versions. 
+\section{Project Architecture}
 
-Refer to \verb|acmart.pdf| \cite{veytsmanlatex} (\url{https://www.ctan.org/pkg/acmart}, \url{http://www.acm.org/publications/proceedings-template}) for additional examples and instructions.
+\subsection{Code Architecture}
+Our source code (project-57514-58172/src) is composed by the following files:
 
-\subsection{Subsection}
+\subsubsection{main.cpp}
+Main file that runs all possible tests, depending on which configuration is running.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-Sed aliquam nisl turpis, sit amet mollis leo accumsan vel.
-Donec semper turpis dui, a porttitor lorem tincidunt id.
-Phasellus gravida, purus non faucibus euismod, lectus tortor maximus elit, vestibulum lobortis purus turpis non urna.
-Fusce feugiat lectus ut massa molestie, non interdum augue porta.
-Nunc dapibus odio nec neque cursus, ut lacinia velit rutrum.
-Duis tempor nulla velit, sed pellentesque nunc imperdiet ut.
-Phasellus eget hendrerit neque.
-Suspendisse aliquet nulla id sem aliquam aliquam sed a orci.
-Duis sem est, hendrerit nec porttitor sit amet, maximus sed nulla.
-Suspendisse et dictum massa.
-Morbi non diam nec orci sodales eleifend.
-Etiam eget finibus purus, a malesuada ipsum.
-Nullam ac nisi nec elit faucibus aliquet.
-Nulla feugiat velit sed sodales eleifend.
-Donec orci nulla, viverra et mi in, sagittis egestas urna.
+\subsubsection{histogram\textunderscore eq.cpp}
+Initial code for iterative histogram equalization (Sequential version)
 
+\subsubsection{histogram\textunderscore par\textunderscore initial.cpp}
+First parallel version of the sequential code
 
+\subsubsection{histogram\textunderscore par\textunderscore second.cpp}
+Second parallel version (improvements made over the initial parallel version)
 
-\subsubsection{Subsubsection}
+\subsubsection{histogram\textunderscore par.cpp}
+Final parallel version (improvements made over the second parallel version)
 
-Integer eleifend quam et odio iaculis, at elementum augue aliquam.
-Ut eu nibh nec urna finibus semper fermentum id purus.
-Aliquam eu sollicitudin libero.
-Cras viverra elit congue erat pulvinar, vitae vehicula tortor interdum.
-Aliquam commodo mi sapien, ullamcorper egestas velit tempor nec.
-Quisque sapien velit, fringilla non vulputate nec, lacinia in dui.
-Nam vestibulum volutpat ante, eu sodales enim tincidunt vel.
-Ut mollis elit quis bibendum eleifend.
-In laoreet tortor non odio ultrices mollis.
-Curabitur volutpat et risus quis fermentum.
-Morbi laoreet ligula eget orci consectetur, in dictum ipsum efficitur.
-Mauris nec neque ultricies, efficitur elit id, hendrerit nibh.
-Interdum et malesuada fames ac ante ipsum primis in faucibus.
+\subsubsection{histogram\textunderscore cuda.cu}
+GPU-accelerated version of the final parallel version of the code
 
+\subsubsection{dataset\textunderscore generator.cpp}
+File that generates random images with given height and width
 
+\subsection{CMakeLists.txt configuration}
+To be able to run the tests, for each version of the code we added a configuration to create an executable with the main.cpp and the respective verion's histogram file. When the project is built, 6 executable are created for testing the solution:
 
-\paragraph{Paragraph}
+\subsubsection{project}
+Executable that runs the sequential version.
 
-Nulla scelerisque id lectus a luctus.
-Curabitur quis dolor maximus, maximus erat ut, placerat justo.
-Donec auctor purus a lacus molestie maximus.
-Etiam porta ligula a quam mollis efficitur.
-Quisque vel sapien iaculis, pellentesque lorem nec, hendrerit lectus.
-Vestibulum egestas congue euismod.
-Praesent a tristique massa.
-Aliquam eget ante elit.
-Phasellus eget metus mi.
-Fusce nec rutrum mi.
-Pellentesque eu congue mi.
-Fusce eu ullamcorper est.
+\subsubsection{project\textunderscore par}
+Executable that runs the final parallelized version.
+
+\subsubsection{project\textunderscore par\textunderscore initial}
+Executable that runs the initial parallelized version.
+
+\subsubsection{project\textunderscore par\textunderscore second}
+Executable that runs the second parallelized version.
+
+\subsubsection{project\textunderscore cuda}
+Executable that runs the GPU-accelerated version off the final parallelized version.
+
+\subsubsection{dataset\textunderscore generator}
+Executable that runs the image generator
+
+\subsection{Build instructions}
+To build correctly the project, follow the following steps:
+\subsubsection{Clone the repository}
+\subsubsection{Navigate to project-57514-58172 folder}
+\subsubsection{Remove the existing build package(if any): rm -rf build}
+\subsubsection{Create build folder:mkdir build}
+\subsubsection{Run: sudo CUDACCXX=/usr/loccal/ccuda-11.8/bin/nvcc cmake -B build -S.}
+\subsubsection{Then: cd build and finally: make}
+
+\subsection{Test instructions}
+To execute manual test, run the command .\/{executable\textunderscore name} input\textunderscore image number\textunderscore iterations output\textunderscore image. 
+In the project-57514-58172/scripts folder is a run\textunderscore tests.sh file, which runs all versions, for three different images(3000x2500px, 5184x3456px and 800x600px respectively). The output is written to the analysis.txt file in the same folder.
+\section{Stage 1}
+In this section we will describe the implementation of every parallelized version.
+\subsection{Initial Parallelization}
+The base file for this version is the sequential version of the code.
+\subsubsection{Implementation}
+After analyzing the sequential version, our first step was to refactor the code, more specifically the histogram\textunderscore equalization function, in order to split the parallelizable loops into their own functions. For each parallelized function, the basic "\# pragma omp parallel for" was used, except for the find\textunderscore cdf\textunderscore min, where "\#pragma omp parallel for reduction(min : cdf\textunderscore min)" was used. Additionally, the convert\textunderscore to\textunderscore grayscale function was improved (the two for loops were joined into one for loop for the combined sizes).
+\subsubsection{Performance analysis}
+After refactoring the code, we run different tests, with images with different sizes and different number of iterations. These were the results of the speedup between the sequential and this version, for an image of size 3000x2500 px:
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{InitialParallelSpeedup.png}
+    \caption{Speedup of the Initial Parallel Version}
+\end{figure}
+
+As we can see, this initial change improved the efficiency of the solution, resulting in a Speedup of around 5.
+\subsubsection{Profiler Analysis}
+We also run the profiler in CLion for the sequential version and this first parallel implementation. We can observe that the existing hotspot in the histogram\textunderscore equalization function was mitigated. 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{SequentialProfiler.png}
+    \caption{CLion Profiler of the Sequential Version}
+\end{figure}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{InitialParallelProfiler.png}
+    \caption{CLion Profiler of the First Parallel Version}
+\end{figure}
+
+\subsection{Second Parallelization}
+\subsubsection{Implementation}
+This second implementation is the result of the improvement of the build\textunderscore histogram function. We changed the simple use of "\# pragma omp parallel for" with the use of more complex parallel implementation, 
+\subsubsection{Performance Analysis}
+The performance analysis showed us better performance than the first parallel version. We can also observe that this version showed the best performance when using 8 threads, and not 12.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{SecondParallelSpeedup.png}
+    \caption{Speedup of the Second VS Initial Parallel versions}
+\end{figure}
+
+\subsubsection{Profiler Analysis}
+The results of the profiler were pretty similar to the initial parallel version, tho:
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{SecondParallelProfiler.png}
+    \caption{CLion Profiller of the Second Parallel Version}
+\end{figure}
+
+\subsection{Final Parallelization}
+\subsubsection{Implementation}
+Our final parallel version consists in joining the following three functions into one:convert\textunderscore to\textunderscore uchar, convert\textunderscore to\textunderscore grayscale and build\textunderscore histogram. This way, instead of having three different loops, we only have one.
+\subsubsection{Performance Analysis}
+As expected, this was the best performer of all versions:
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{FinalParallelVersion.png}
+    \caption{Speedup of the Final Parallel Version}
+\end{figure}
+
+\subsubsection{Profiler Analysis}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{FinalParallelProfiler.png}
+    \caption{Flame Graph of the sequential code}
+\end{figure}
+\section{Stage 2}
+\subsection{Implementation}
+The GPU-accelerated version consists of the implementation of the last parallel version (implemented in stage 1), but with the boost of using the GPU.
+\subsection{Performance Analysis}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{CUDA.png}
+    \caption{Speedup of the Final Parallel Version VS CUDA}
+\end{figure}
+
+\section{Overall analysis}
+
+\section{Individual Contributions}
+\subsection{Pedro Banha}
+\subsection{Martin Magdalinchev}
 
 
 \bibliographystyle{acm}

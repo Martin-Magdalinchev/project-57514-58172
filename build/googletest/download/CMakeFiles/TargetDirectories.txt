@@ -1,3 +1,0 @@
-/home/martin/Documents/CP/project-57514-58172/build/googletest/download/CMakeFiles/googletest.dir
-/home/martin/Documents/CP/project-57514-58172/build/googletest/download/CMakeFiles/edit_cache.dir
-/home/martin/Documents/CP/project-57514-58172/build/googletest/download/CMakeFiles/rebuild_cache.dir
