@@ -99,6 +99,17 @@ add_executable(project_cuda
 
 target_link_libraries(project_cuda wb )
 
+##################
+# project_cuda_512
+##################
+
+add_executable(project_cuda_512
+        src/main.cpp
+        src/histogram_cuda_512.cu
+)
+
+target_link_libraries(project_cuda_512 wb )
+
 ##############################################################
 # Tests
 ##############################################################

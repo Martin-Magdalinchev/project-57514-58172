@@ -68,6 +68,8 @@ all: CMakeFiles/dataset_generator.dir/all
 all: CMakeFiles/project_par.dir/all
 all: CMakeFiles/project_par_initial.dir/all
 all: CMakeFiles/project_par_second.dir/all
+all: CMakeFiles/project_cuda.dir/all
+all: CMakeFiles/project_cuda_512.dir/all
 all: libwb/all
 all: test/all
 .PHONY : all
@@ -83,6 +85,8 @@ clean: CMakeFiles/dataset_generator.dir/clean
 clean: CMakeFiles/project_par.dir/clean
 clean: CMakeFiles/project_par_initial.dir/clean
 clean: CMakeFiles/project_par_second.dir/clean
+clean: CMakeFiles/project_cuda.dir/clean
+clean: CMakeFiles/project_cuda_512.dir/clean
 clean: libwb/clean
 clean: googletest/build/clean
 clean: test/clean
@@ -232,7 +236,7 @@ CMakeFiles/dataset_generator.dir/clean:
 CMakeFiles/project_par.dir/all: libwb/CMakeFiles/wb.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/project_par.dir/build.make CMakeFiles/project_par.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/project_par.dir/build.make CMakeFiles/project_par.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/martin/Documents/CP/project-57514-58172/build/CMakeFiles --progress-num=37,38,39 "Built target project_par"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/pmtbl/Desktop/project-57514-58172/build/CMakeFiles --progress-num=43,44,45 "Built target project_par"
 .PHONY : CMakeFiles/project_par.dir/all
 
 # Build rule for subdir invocation for target.
@@ -258,7 +262,7 @@ CMakeFiles/project_par.dir/clean:
 CMakeFiles/project_par_initial.dir/all: libwb/CMakeFiles/wb.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/project_par_initial.dir/build.make CMakeFiles/project_par_initial.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/project_par_initial.dir/build.make CMakeFiles/project_par_initial.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/martin/Documents/CP/project-57514-58172/build/CMakeFiles --progress-num=40,41,42 "Built target project_par_initial"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/pmtbl/Desktop/project-57514-58172/build/CMakeFiles --progress-num=46,47,48 "Built target project_par_initial"
 .PHONY : CMakeFiles/project_par_initial.dir/all
 
 # Build rule for subdir invocation for target.
@@ -284,7 +288,7 @@ CMakeFiles/project_par_initial.dir/clean:
 CMakeFiles/project_par_second.dir/all: libwb/CMakeFiles/wb.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/project_par_second.dir/build.make CMakeFiles/project_par_second.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/project_par_second.dir/build.make CMakeFiles/project_par_second.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/martin/Documents/CP/project-57514-58172/build/CMakeFiles --progress-num=43,44,45 "Built target project_par_second"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/pmtbl/Desktop/project-57514-58172/build/CMakeFiles --progress-num=49,50,51 "Built target project_par_second"
 .PHONY : CMakeFiles/project_par_second.dir/all
 
 # Build rule for subdir invocation for target.
@@ -304,13 +308,65 @@ CMakeFiles/project_par_second.dir/clean:
 .PHONY : CMakeFiles/project_par_second.dir/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/project_cuda.dir
+
+# All Build rule for target.
+CMakeFiles/project_cuda.dir/all: libwb/CMakeFiles/wb.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/project_cuda.dir/build.make CMakeFiles/project_cuda.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/project_cuda.dir/build.make CMakeFiles/project_cuda.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/martin/Documents/CP/project-57514-58172/build/CMakeFiles --progress-num=37,38,39 "Built target project_cuda"
+.PHONY : CMakeFiles/project_cuda.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/project_cuda.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/Documents/CP/project-57514-58172/build/CMakeFiles 23
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/project_cuda.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/Documents/CP/project-57514-58172/build/CMakeFiles 0
+.PHONY : CMakeFiles/project_cuda.dir/rule
+
+# Convenience name for target.
+project_cuda: CMakeFiles/project_cuda.dir/rule
+.PHONY : project_cuda
+
+# clean rule for target.
+CMakeFiles/project_cuda.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/project_cuda.dir/build.make CMakeFiles/project_cuda.dir/clean
+.PHONY : CMakeFiles/project_cuda.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/project_cuda_512.dir
+
+# All Build rule for target.
+CMakeFiles/project_cuda_512.dir/all: libwb/CMakeFiles/wb.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/project_cuda_512.dir/build.make CMakeFiles/project_cuda_512.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/project_cuda_512.dir/build.make CMakeFiles/project_cuda_512.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/pmtbl/Desktop/project-57514-58172/build/CMakeFiles --progress-num=40,41,42 "Built target project_cuda_512"
+.PHONY : CMakeFiles/project_cuda_512.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/project_cuda_512.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/pmtbl/Desktop/project-57514-58172/build/CMakeFiles 23
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/project_cuda_512.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/pmtbl/Desktop/project-57514-58172/build/CMakeFiles 0
+.PHONY : CMakeFiles/project_cuda_512.dir/rule
+
+# Convenience name for target.
+project_cuda_512: CMakeFiles/project_cuda_512.dir/rule
+.PHONY : project_cuda_512
+
+# clean rule for target.
+CMakeFiles/project_cuda_512.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/project_cuda_512.dir/build.make CMakeFiles/project_cuda_512.dir/clean
+.PHONY : CMakeFiles/project_cuda_512.dir/clean
+
+#=============================================================================
 # Target rules for target libwb/CMakeFiles/wb.dir
 
 # All Build rule for target.
 libwb/CMakeFiles/wb.dir/all:
 	$(MAKE) $(MAKESILENT) -f libwb/CMakeFiles/wb.dir/build.make libwb/CMakeFiles/wb.dir/depend
 	$(MAKE) $(MAKESILENT) -f libwb/CMakeFiles/wb.dir/build.make libwb/CMakeFiles/wb.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/martin/Documents/CP/project-57514-58172/build/CMakeFiles --progress-num=48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67 "Built target wb"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/pmtbl/Desktop/project-57514-58172/build/CMakeFiles --progress-num=54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73 "Built target wb"
 .PHONY : libwb/CMakeFiles/wb.dir/all
 
 # Build rule for subdir invocation for target.
@@ -468,7 +524,7 @@ test/CMakeFiles/template_test.dir/all: googletest/build/googletest/CMakeFiles/gt
 test/CMakeFiles/template_test.dir/all: googletest/build/googletest/CMakeFiles/gtest_main.dir/all
 	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/template_test.dir/build.make test/CMakeFiles/template_test.dir/depend
 	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/template_test.dir/build.make test/CMakeFiles/template_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/martin/Documents/CP/project-57514-58172/build/CMakeFiles --progress-num=46,47 "Built target template_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/pmtbl/Desktop/project-57514-58172/build/CMakeFiles --progress-num=52,53 "Built target template_test"
 .PHONY : test/CMakeFiles/template_test.dir/all
 
 # Build rule for subdir invocation for target.
