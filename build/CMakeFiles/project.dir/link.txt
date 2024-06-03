@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/project.dir/src/main.cpp.o CMakeFiles/project.dir/src/histogram_eq.cpp.o -o project  libwb/libwb.a 

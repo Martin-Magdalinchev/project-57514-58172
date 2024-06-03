@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/dataset_generator.dir/src/dataset_generator.cpp.o -o dataset_generator  libwb/libwb.a 
